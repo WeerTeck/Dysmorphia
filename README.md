@@ -9,8 +9,8 @@
   <style>
     body {
       font-family: 'Merriweather', serif;
-      background: linear-gradient(135deg, #21222c 10%, #1a1b23 90%);
-      color: #f3f3f3;
+      background: linear-gradient(135deg, #1e2a38 10%, #27394a 90%);
+      color: #e3eaf2;
       min-height: 100vh;
       margin: 0;
       display: flex;
@@ -20,32 +20,32 @@
     }
     nav {
       position: fixed; top: 0; left: 0; right: 0; height: 56px;
-      background: rgba(33,34,44,0.98); box-shadow: 0 3px 18px #22223388;
+      background: rgba(30,42,56,0.98); box-shadow: 0 3px 18px #1b232c88;
       z-index: 2002; display: flex; align-items: center; justify-content: space-between;
       padding: 0 2vw; font-size: 1.08em;
     }
     nav .nav-logo {
       font-family: 'Quicksand', sans-serif;
-      font-weight: 700; font-size: 1.34em; color: #a7b5f7; letter-spacing: 2px;
-      text-shadow: 0 0 8px #c2cdfa33; display: flex; align-items: center;
+      font-weight: 700; font-size: 1.34em; color: #6eb7e6; letter-spacing: 2px;
+      text-shadow: 0 0 8px #0d1e2e33; display: flex; align-items: center;
     }
     nav ul { list-style: none; display: flex; gap: 2em; margin: 0; padding: 0;}
     nav ul li a {
-      color: #a7b5f7; text-decoration: none; font-weight: 700; font-family: 'Quicksand', sans-serif;
+      color: #6eb7e6; text-decoration: none; font-weight: 700; font-family: 'Quicksand', sans-serif;
       padding: 6px 12px; border-radius: 8px;
       transition: background 0.2s, color 0.2s;
     }
-    nav ul li a:hover, nav ul li a:focus { background: #6b55b9; color: #fff; }
+    nav ul li a:hover, nav ul li a:focus { background: #284b63; color: #fff; }
     nav ul li .sourcelink {
       display: block;
-      color: #c2cdfa;
+      color: #9fd3c7;
       font-size: 0.9em;
       margin-top: 2px;
       margin-left: 8px;
       text-decoration: underline;
       font-family: 'Quicksand', sans-serif;
     }
-    nav ul li .sourcelink:hover { color: #efc2fa; }
+    nav ul li .sourcelink:hover { color: #e6f7ff; }
     header, main, footer { margin-top: 56px; }
     @media (max-width: 700px) { nav ul { gap: 1em; } nav .nav-logo { font-size: 1em; } }
     @media (max-width: 520px) {
@@ -65,11 +65,11 @@
       position: absolute;
       width: 110px;
       height: 54px;
-      background: linear-gradient(120deg, #23233a 65%, #35355a 100%);
+      background: linear-gradient(120deg, #23344a 65%, #284b63 100%);
       border-radius: 26px 26px 54px 54px / 26px 26px 54px 54px;
-      box-shadow: 0 6px 22px #39396a55, 0 2px 18px #23233add;
-      opacity: 0.56;
-      border: 2px solid #373851;
+      box-shadow: 0 6px 22px #13344a55, 0 2px 18px #142e3add;
+      opacity: 0.44;
+      border: 2px solid #284b63;
       filter: blur(0.9px) brightness(1.04);
       animation: mirrorFloat 8s linear infinite;
       pointer-events: none;
@@ -80,9 +80,9 @@
       position: absolute;
       left: 35%; top: 8%;
       width: 23px; height: 8px;
-      background: linear-gradient(90deg, #fff5, #fff0 80%);
+      background: linear-gradient(90deg, #fff3, #fff0 80%);
       border-radius: 6px;
-      opacity: 0.53;
+      opacity: 0.43;
       transform: rotate(-18deg);
     }
     @keyframes mirrorFloat {
@@ -92,100 +92,78 @@
       65% { filter: brightness(1.03) blur(0.2px);}
       100% { transform: translateY(16vh) scaleX(1.03) rotate(6deg);}
     }
-    a { color: #a7b5f7; text-decoration: none; transition: color 0.3s; }
-    a:hover, a:focus { color: #f2a4ec; text-decoration: underline; outline: none; }
+    a { color: #6eb7e6; text-decoration: none; transition: color 0.3s; }
+    a:hover, a:focus { color: #9fd3c7; text-decoration: underline; outline: none; }
     header, main, footer {
       position: relative; z-index: 2; max-width: 920px; width: 93%; margin: auto; padding: 1.6rem 0;
     }
     header { text-align: center; }
     h1 {
       font-family: 'Quicksand', sans-serif;
-      font-weight: 700; font-size: 2.9rem; color: #a7b5f7; margin-bottom: 0.3rem;
-      letter-spacing: 2px; text-shadow: 0 1px 18px #6b55b955, 0 0 6px #c2cdfa55;
+      font-weight: 700; font-size: 2.9rem; color: #6eb7e6; margin-bottom: 0.3rem;
+      letter-spacing: 2px; text-shadow: 0 1px 18px #284b6355, 0 0 6px #9fd3c755;
       animation: text-glow 4s ease-in-out infinite alternate;
     }
     @keyframes text-glow {
-      to { text-shadow: 0 0 35px #b993d6ff, 0 0 20px #f7cac9bb; }
+      to { text-shadow: 0 0 35px #6eb7e6aa, 0 0 20px #9fd3c7bb; }
     }
     .subtitle {
       font-family: 'Merriweather', serif;
-      font-weight: 500; font-size: 1.22rem; color: #f2a4ec; margin-bottom: 3rem;
-      text-shadow: 0 0 6px #f2a4ec44; letter-spacing: 1px; animation: fadeIn 2s 0.5s both;
+      font-weight: 500; font-size: 1.22rem; color: #9fd3c7; margin-bottom: 3rem;
+      text-shadow: 0 0 6px #9fd3c744; letter-spacing: 1px; animation: fadeIn 2s 0.5s both;
     }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(40px);} to { opacity: 1; transform: translateY(0);} }
     h2 {
-      color: #a7b5f7; margin-bottom: 1rem; font-weight: 700; font-size: 1.7rem;
+      color: #6eb7e6; margin-bottom: 1rem; font-weight: 700; font-size: 1.7rem;
       letter-spacing: 1px; font-family: 'Quicksand', sans-serif;
-      text-shadow: 0 0 6px #6b55b9aa;
+      text-shadow: 0 0 6px #284b63aa;
     }
     section { margin-bottom: 2.7rem; }
     .sr { opacity: 0; transform: translateY(40px); transition: opacity 0.7s, transform 0.7s;}
     .sr.visible { opacity: 1; transform: translateY(0); }
     .card {
-      background: rgba(33,34,44,0.95); border-radius: 21px; padding: 1.5rem 2rem;
-      box-shadow: 0 1px 26px #6b55b933; margin-bottom: 1.7rem; transition: box-shadow 0.3s, transform 0.3s;
-      border: 1.5px solid #23233a;
+      background: rgba(30,42,56,0.96); border-radius: 21px; padding: 1.5rem 2rem;
+      box-shadow: 0 1px 26px #284b6333; margin-bottom: 1.7rem; transition: box-shadow 0.3s, transform 0.3s;
+      border: 1.5px solid #23344a;
     }
-    .card:hover { box-shadow: 0 4px 38px #6b55b955; transform: scale(1.02);}
-    .gallery { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom:2rem;}
-    .gallery img {
-      width: 31%; border-radius: 17px; box-shadow: 0 0 16px #6b55b955, 0 5px 16px #39396a33;
-      cursor: pointer; transition: transform 0.35s, box-shadow 0.25s, filter 0.2s;
-      filter: grayscale(0.07) brightness(0.97); border: 2px solid #39396a;
-      background: #181826;
-      object-fit: cover;
-      aspect-ratio: 4/3;
-    }
-    .gallery img:hover, .gallery img:focus {
-      transform: scale(1.12) rotate(-2deg); box-shadow: 0 0 30px #b993d6ff, 0 0 10px #fff5;
-      filter: grayscale(0) brightness(1.12); border-color: #f2a4ec; outline: none; z-index: 3;
-    }
-    .modal-img { display: none; position: fixed; z-index: 1200; left: 0; top: 0; width: 100vw; height: 100vh; background: rgba(33,34,44,0.96); justify-content: center; align-items: center; animation: fadeIn 0.2s;}
-    .modal-img.active { display: flex; }
-    .modal-img img { max-width: 90vw; max-height: 80vh; border-radius: 22px; box-shadow: 0 0 50px #6b55b9cc; border: 4px solid #a7b5f7; animation: imgpop 0.3s;}
-    @keyframes imgpop { from { transform: scale(0.68);} to { transform: scale(1);} }
-    .modal-img .close-modal {
-      position: absolute; top: 35px; right: 55px; font-size: 2.5rem; color: #a7b5f7;
-      background: transparent; border: none; cursor: pointer; z-index: 1300; transition: color 0.2s;
-    }
-    .modal-img .close-modal:hover { color: #f2a4ec; }
+    .card:hover { box-shadow: 0 4px 38px #284b6355; transform: scale(1.02);}
     .fact-box {
-      background: #23233a44;
-      color: #f3f3f3;
-      border: 1.5px solid #a7b5f7;
+      background: #23344a44;
+      color: #e3eaf2;
+      border: 1.5px solid #6eb7e6;
       border-radius: 13px;
       padding: 1em 1.3em;
       margin: 1.1em 0;
       font-family: 'Quicksand', sans-serif;
       font-size: 1.09em;
-      box-shadow: 0 2px 14px #6b55b922;
+      box-shadow: 0 2px 14px #284b6322;
     }
     blockquote {
-      background: #39396a22;
-      border-left: 6px solid #f2a4ec;
+      background: #23344a22;
+      border-left: 6px solid #6eb7e6;
       margin: 1.3em 0;
       padding: 1.1em 1.2em 1.1em 1.8em;
       font-style: italic;
-      color: #a7b5f7;
+      color: #6eb7e6;
       border-radius: 12px;
-      box-shadow: 0 2px 18px #6b55b911;
+      box-shadow: 0 2px 18px #284b6311;
     }
     .source-list {
       margin: 2.5em 0 1em 0;
       padding: 1em 1.8em;
-      background: #23233a;
+      background: #23344a;
       border-radius: 14px;
-      box-shadow: 0 0 12px #39396a33;
+      box-shadow: 0 0 12px #284b6333;
     }
     .source-list h3 {
-      color: #f2a4ec;
+      color: #9fd3c7;
       font-family: 'Quicksand', sans-serif;
       font-size: 1.09em;
       margin-bottom: 0.7em;
     }
     .source-list ul {
       list-style: disc inside;
-      color: #a7b5f7;
+      color: #6eb7e6;
       font-size: 1em;
       margin: 0;
       padding: 0;
@@ -195,7 +173,7 @@
     }
     .graph-section h2 {
       font-size: 1.2em;
-      color: #f2a4ec;
+      color: #9fd3c7;
       margin-bottom: 1em;
     }
     .graph-container {
@@ -208,14 +186,14 @@
     }
     .bar-graph {
       width: 80px;
-      background: linear-gradient(180deg, #f2a4ec 80%, #39396a 100%);
+      background: linear-gradient(180deg, #9fd3c7 80%, #284b63 100%);
       border-radius: 13px 13px 0 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       margin: 0 9px;
       text-align: center;
-      box-shadow: 0 2px 14px #6b55b922;
+      box-shadow: 0 2px 14px #284b6322;
       color: #fff;
     }
     .bar {
@@ -227,17 +205,17 @@
     .bar-label {
       font-size: 0.96em;
       margin-bottom: 7px;
-      color: #f3f3f3;
+      color: #e3eaf2;
     }
     .bar-value {
       font-size: 1.12em;
       font-weight: bold;
-      color: #f2a4ec;
+      color: #9fd3c7;
       margin-bottom: 4px;
     }
     footer {
-      text-align: center; font-size: 0.97rem; color: #a7b5f7; padding: 1.5rem 0; border-top: 1.5px solid #39396a;
-      margin-top: auto; background: linear-gradient(90deg, #1a1b23, #23233a); letter-spacing: 1px; z-index: 2;
+      text-align: center; font-size: 0.97rem; color: #6eb7e6; padding: 1.5rem 0; border-top: 1.5px solid #23344a;
+      margin-top: auto; background: linear-gradient(90deg, #1e2a38, #23344a); letter-spacing: 1px; z-index: 2;
     }
     @media (max-width: 900px) { header, main, footer { width: 98%; } }
     @media (max-width: 768px) {
@@ -269,7 +247,7 @@
       </li>
       <li>
         <a href="#causes">Causes</a>
-        <a class="sourcelink" target="_blank" href="https://www.verywellmind.com/body-dysmorphic-disorder-in-children-and-teens-5201591">Source: Verywell Mind</a>
+        <a class="sourcelink" target="_blank" href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/">Source: Mind</a>
       </li>
       <li>
         <a href="#effects">Effects</a>
@@ -277,14 +255,10 @@
       </li>
       <li>
         <a href="#combat">How to Combat Dysmorphia</a>
-        <a class="sourcelink" target="_blank" href="https://www.verywellmind.com/how-to-cope-with-body-dysmorphic-disorder-5105171">Source: Verywell Mind</a>
+        <a class="sourcelink" target="_blank" href="https://iocdf.org/about-ocd/related-disorders/bdd/">Source: IOCDF</a>
       </li>
       <li>
         <a href="#campaign">Our Awareness Campaign</a>
-      </li>
-      <li>
-        <a href="#gallery">Gallery</a>
-        <a class="sourcelink" target="_blank" href="https://unsplash.com/s/photos/body-dysmorphia">Gallery Source: Unsplash</a>
       </li>
       <li>
         <a href="#faq">FAQ</a>
@@ -320,32 +294,32 @@
       <h2>Graph: Most Common Mental Health Issues in Teens</h2>
       <div class="graph-container">
         <div class="bar-graph">
-          <div class="bar" style="height:120px;background:#f2a4ec;"></div>
+          <div class="bar" style="height:120px;background:#6eb7e6;"></div>
           <div class="bar-value">31%</div>
           <div class="bar-label">Anxiety</div>
         </div>
         <div class="bar-graph">
-          <div class="bar" style="height:95px;background:#a7b5f7;"></div>
+          <div class="bar" style="height:95px;background:#9fd3c7;"></div>
           <div class="bar-value">24%</div>
           <div class="bar-label">Depression</div>
         </div>
         <div class="bar-graph">
-          <div class="bar" style="height:67px;background:#6b55b9;"></div>
+          <div class="bar" style="height:67px;background:#284b63;"></div>
           <div class="bar-value">17%</div>
           <div class="bar-label">Eating Disorders</div>
         </div>
         <div class="bar-graph">
-          <div class="bar" style="height:56px;background:#39396a;"></div>
+          <div class="bar" style="height:56px;background:#23344a;"></div>
           <div class="bar-value">14%</div>
           <div class="bar-label">Self-harm</div>
         </div>
         <div class="bar-graph">
-          <div class="bar" style="height:38px;background:#f2a4ec88;"></div>
+          <div class="bar" style="height:38px;background:#6eb7e688;"></div>
           <div class="bar-value">10%</div>
           <div class="bar-label">Other</div>
         </div>
       </div>
-      <div style="font-size:0.95em;color:#c2cdfa">*Percentages based on global adolescent mental health statistics.</div>
+      <div style="font-size:0.95em;color:#9fd3c7">*Percentages based on global adolescent mental health statistics.</div>
     </section>
     <section class="sr card" id="dysmorphia-teen">
       <h2>Dysmorphia in Adolescents</h2>
@@ -364,17 +338,17 @@
       <h2>Graph: Percentage of Teens Affected by Body Dysmorphia</h2>
       <div class="graph-container">
         <div class="bar-graph">
-          <div class="bar" style="height:26px;background:#a7b5f7;"></div>
+          <div class="bar" style="height:26px;background:#9fd3c7;"></div>
           <div class="bar-value">2%</div>
           <div class="bar-label">Diagnosed</div>
         </div>
         <div class="bar-graph">
-          <div class="bar" style="height:80px;background:#f2a4ec;"></div>
+          <div class="bar" style="height:80px;background:#6eb7e6;"></div>
           <div class="bar-value">>50%</div>
           <div class="bar-label">Body Image Concerns</div>
         </div>
       </div>
-      <div style="font-size:0.95em;color:#c2cdfa">*Many teens experience body image concerns even if not diagnosed with dysmorphia.</div>
+      <div style="font-size:0.95em;color:#9fd3c7">*Many teens experience body image concerns even if not diagnosed with dysmorphia.</div>
     </section>
     <section class="sr card" id="causes">
       <h2>Causes of Dysmorphia in Adolescents</h2>
@@ -385,7 +359,7 @@
         <li><strong>Family & Culture:</strong> Pressure to fit in, family focus on appearance</li>
         <li><strong>Mental Health:</strong> Anxiety, depression, or OCD increases risk</li>
       </ul>
-      <a class="sourcelink" target="_blank" href="https://www.verywellmind.com/body-dysmorphic-disorder-in-children-and-teens-5201591">Source: Verywell Mind</a>
+      <a class="sourcelink" target="_blank" href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/">Source: Mind</a>
     </section>
     <section class="sr card" id="effects">
       <h2>Effects of Body Dysmorphia in Teens</h2>
@@ -402,19 +376,21 @@
       <a class="sourcelink" target="_blank" href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/">Source: Mind</a>
     </section>
     <section class="sr card" id="combat">
-      <h2>How to Combat Dysmorphia</h2>
+      <h2>How to Combat & Prevent Dysmorphia</h2>
       <ul>
-        <li>Talk to someone you trust about your feelings.</li>
-        <li>Limit time on social media and unfollow negative accounts.</li>
-        <li>Focus on what your body <b>can do</b>, not just how it looks.</li>
-        <li>Practice kindness to yourself—write down things you like about yourself.</li>
-        <li>Seek support from a school counselor, psychologist, or helpline.</li>
-        <li>Remember: Most online images are edited or filtered.</li>
+        <li><b>Talk Openly:</b> Share your worries with family, friends, or a counselor.</li>
+        <li><b>Limit Social Media:</b> Take breaks, unfollow negative accounts, and avoid comparing yourself to others.</li>
+        <li><b>Focus on Strengths:</b> Write down things you like about yourself that are not about appearance.</li>
+        <li><b>Learn Media Literacy:</b> Understand that most images online are retouched or filtered.</li>
+        <li><b>Practice Self-Compassion:</b> Treat yourself as you would a friend—with kindness and patience.</li>
+        <li><b>Challenge Negative Thoughts:</b> Notice and question harsh self-criticism.</li>
+        <li><b>Promote Positive Environments:</b> Support school campaigns that celebrate diversity and acceptance.</li>
+        <li><b>Seek Professional Help:</b> Don't hesitate to contact a psychologist or helpline if needed.</li>
       </ul>
       <div class="fact-box">
-        <b>Asking for help is a sign of strength, not weakness.</b>
+        <b>Prevention starts with awareness, acceptance, and kindness—towards yourself and others.</b>
         <br>
-        <a class="sourcelink" target="_blank" href="https://www.verywellmind.com/how-to-cope-with-body-dysmorphic-disorder-5105171">Source: Verywell Mind</a>
+        <a class="sourcelink" target="_blank" href="https://iocdf.org/about-ocd/related-disorders/bdd/">Source: IOCDF</a>
       </div>
     </section>
     <section class="sr card" id="campaign">
@@ -427,21 +403,11 @@
         <li><b>Promote Self-Acceptance:</b> Social media posts, posters, and videos with real stories</li>
         <li><b>Fight Stigma:</b> Open discussions and safe spaces for teens to share their feelings</li>
         <li><b>Support Each Other:</b> Peer support groups and resources for seeking help</li>
+        <li><b>Prevent Dysmorphia Early:</b> Activities that teach media literacy and celebrate differences</li>
       </ul>
       <div class="fact-box">
-        <b>Join us!</b> Share your story, support a friend, or spread the message: <span style="color:#f2a4ec"><b>#SeeYourselfClearly</b></span>
+        <b>Join us!</b> Share your story, support a friend, or spread the message: <span style="color:#9fd3c7"><b>#SeeYourselfClearly</b></span>
       </div>
-    </section>
-    <section class="sr" id="gallery">
-      <h2>Gallery</h2>
-      <div class="gallery" aria-label="Body Dysmorphia Visuals">
-        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Teen looking at their reflection in a mirror with concern" loading="lazy" tabindex="0" />
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Distorted reflection in a cracked mirror" loading="lazy" tabindex="0" />
-        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="A hand over a foggy mirror, obscured face" loading="lazy" tabindex="0" />
-        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Fragmented mirror and a face, representing broken self-image" loading="lazy" tabindex="0" />
-        <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=600&q=80" alt="Teen sitting in front of a mirror, looking away" loading="lazy" tabindex="0" />
-      </div>
-      <a class="sourcelink" target="_blank" href="https://unsplash.com/s/photos/body-dysmorphia">Gallery Source: Unsplash</a>
     </section>
     <section class="sr card" id="faq">
       <h2>Frequently Asked Questions</h2>
@@ -462,6 +428,10 @@
           <div class="faq-q">How can I help a friend with dysmorphia?</div>
           <div class="faq-a">Listen, support them without judgment, and encourage talking to a professional if needed.</div>
         </li>
+        <li class="faq-item">
+          <div class="faq-q">How can we prevent dysmorphia in schools?</div>
+          <div class="faq-a">Promote acceptance, talk openly about body image, and organize workshops on media literacy and self-esteem.</div>
+        </li>
       </ul>
       <a class="sourcelink" target="_blank" href="https://iocdf.org/about-ocd/related-disorders/bdd/">Source: IOCDF</a>
     </section>
@@ -470,7 +440,7 @@
       <p>
         This page was created by <strong>Lucas De Cesare, Bautista Acerbo, and Santiago Martinez</strong> as a school project to raise awareness about body dysmorphia and mental health in adolescents.
       </p>
-      <div style="margin-top:1.3em;color:#f2a4ec;font-size:1.08em;">
+      <div style="margin-top:1.3em;color:#9fd3c7;font-size:1.08em;">
         <i>“Our aim is to reflect the truth: that everyone deserves to feel valued, just as they are.”</i>
       </div>
     </section>
@@ -479,18 +449,15 @@
       <ul>
         <li><a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">World Health Organization: Adolescent Mental Health</a></li>
         <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520805/" target="_blank">NCBI: Body Dysmorphic Disorder in Teens</a></li>
-        <li><a href="https://www.verywellmind.com/body-dysmorphic-disorder-in-children-and-teens-5201591" target="_blank">Verywell Mind: BDD in Children and Teens</a></li>
         <li><a href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/" target="_blank">Mind: Body Dysmorphic Disorder</a></li>
-        <li><a href="https://www.verywellmind.com/how-to-cope-with-body-dysmorphic-disorder-5105171" target="_blank">Verywell Mind: Coping with BDD</a></li>
         <li><a href="https://iocdf.org/about-ocd/related-disorders/bdd/" target="_blank">IOCDF: About BDD</a></li>
-        <li><a href="https://unsplash.com/s/photos/body-dysmorphia" target="_blank">Unsplash: Body Dysmorphia Photos</a></li>
       </ul>
     </section>
   </main>
   <footer>
     <p>&copy; 2025 Dysmorphia Awareness - School Project</p>
     <p>
-      <a href="#intro" style="color: #f2a4ec;">↑ Back to top</a>
+      <a href="#intro" style="color: #9fd3c7;">↑ Back to top</a>
     </p>
   </footer>
   <div class="modal-img" id="modalImg" role="dialog" aria-modal="true" aria-label="Enlarged gallery image">
@@ -542,31 +509,6 @@
       }
       window.addEventListener('scroll', scrollReveal);
       scrollReveal();
-      const galleryImgs = document.querySelectorAll('.gallery img');
-      const modalImg = document.getElementById('modalImg');
-      const modalImgSrc = document.getElementById('modalImgSrc');
-      const closeModalImg = document.getElementById('closeModalImg');
-      galleryImgs.forEach(img => {
-        img.addEventListener('click', () => {
-          modalImgSrc.src = img.src;
-          modalImg.classList.add('active');
-        });
-        img.addEventListener('keydown', e => {
-          if(e.key === "Enter" || e.key === " ") {
-            modalImgSrc.src = img.src;
-            modalImg.classList.add('active');
-          }
-        });
-      });
-      closeModalImg.addEventListener('click', () => {
-        modalImg.classList.remove('active');
-      });
-      modalImg.addEventListener('click', (e) => {
-        if(e.target === modalImg) modalImg.classList.remove('active');
-      });
-      window.addEventListener('keydown', (e) => {
-        if(e.key === "Escape") modalImg.classList.remove('active');
-      });
     });
   </script>
 </body>
