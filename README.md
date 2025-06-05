@@ -20,32 +20,81 @@
     }
     nav {
       position: fixed; top: 0; left: 0; right: 0; height: 56px;
-      background: rgba(30,42,56,0.98); box-shadow: 0 3px 18px #1b232c88;
+      background: #1e2a38; box-shadow: 0 3px 18px #1b232c88;
       z-index: 2002; display: flex; align-items: center; justify-content: space-between;
       padding: 0 2vw; font-size: 1.08em;
     }
-    nav .nav-logo {
+    .nav-logo {
       font-family: 'Quicksand', sans-serif;
-      font-weight: 700; font-size: 1.34em; color: #6eb7e6; letter-spacing: 2px;
+      font-weight: 700; font-size: 1.25em; color: #6eb7e6; letter-spacing: 2px;
       text-shadow: 0 0 8px #0d1e2e33; display: flex; align-items: center;
+      margin-right: 1vw;
     }
-    nav ul { list-style: none; display: flex; gap: 2em; margin: 0; padding: 0;}
-    nav ul li a {
-      color: #6eb7e6; text-decoration: none; font-weight: 700; font-family: 'Quicksand', sans-serif;
-      padding: 6px 12px; border-radius: 8px;
-      transition: background 0.2s, color 0.2s;
+    .nav-links {
+      display: flex; flex-wrap: wrap; gap: 1em; align-items: center;
     }
-    nav ul li a:hover, nav ul li a:focus { background: #284b63; color: #fff; }
-    header {
-      text-align: center;
-      padding-top: 70px;
+    .nav-links a {
+      color: #e3eaf2; background: none; text-decoration: none; font-weight: 700; font-family: 'Quicksand', sans-serif;
+      padding: 6px 11px; border-radius: 7px; transition: background 0.2s, color 0.2s;
+      font-size: 0.99em;
     }
-    main, footer { margin-top: 0; }
-    @media (max-width: 700px) { nav ul { gap: 1em; } nav .nav-logo { font-size: 1em; } }
-    @media (max-width: 520px) {
-      nav { font-size: 0.97em; padding: 0 1vw;}
-      nav ul { gap: 0.6em;}
-      header { padding-top: 80px;}
+    .nav-links a:hover, .nav-links a:focus { background: #284b63; color: #fff; }
+    .nav-dropdown {
+      position: relative;
+    }
+    .nav-dropdown-content {
+      display: none;
+      position: absolute;
+      background: #23344a;
+      min-width: 160px;
+      box-shadow: 0 8px 22px #0004;
+      border-radius: 9px;
+      top: 34px; left: 0;
+      z-index: 5000;
+    }
+    .nav-dropdown:hover .nav-dropdown-content,
+    .nav-dropdown:focus-within .nav-dropdown-content {
+      display: block;
+    }
+    .nav-dropdown-content a {
+      display: block;
+      color: #6eb7e6;
+      padding: 9px 16px;
+      border-radius: 0;
+      background: none;
+      font-size: 1em;
+      margin: 0;
+    }
+    .nav-dropdown-content a:hover { background: #284b63; color: #fff; }
+    .nav-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #6eb7e6;
+      font-size: 2em;
+      margin-left: 1vw;
+      cursor: pointer;
+    }
+    @media (max-width: 850px) {
+      .nav-links { gap: 0.4em; }
+      nav { font-size: 0.99em; }
+      .nav-logo { font-size: 1em;}
+    }
+    @media (max-width: 700px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        top: 56px; left: 0; right: 0;
+        background: #1e2a38;
+        gap: 0;
+        padding: 10px 0 10px 0;
+        border-bottom: 2px solid #23344a;
+      }
+      .nav-links.show { display: flex; }
+      .nav-menu-btn { display: block; }
+      .nav-dropdown-content { position: static; box-shadow: none; min-width: 0;}
+      .nav-dropdown-content a { padding: 10px 18px;}
     }
     #mirrors-bg {
       position: fixed;
@@ -62,7 +111,7 @@
       background: linear-gradient(120deg, #23344a 65%, #284b63 100%);
       border-radius: 26px 26px 54px 54px / 26px 26px 54px 54px;
       box-shadow: 0 6px 22px #13344a55, 0 2px 18px #142e3add;
-      opacity: 0.44;
+      opacity: 0.35;
       border: 2px solid #284b63;
       filter: blur(0.9px) brightness(1.04);
       animation: mirrorFloat 8s linear infinite;
@@ -93,7 +142,7 @@
     }
     h1 {
       font-family: 'Quicksand', sans-serif;
-      font-weight: 700; font-size: 2.9rem; color: #6eb7e6; margin-bottom: 0.3rem;
+      font-weight: 700; font-size: 2.6rem; color: #6eb7e6; margin-bottom: 0.3rem;
       letter-spacing: 2px; text-shadow: 0 1px 18px #284b6355, 0 0 6px #9fd3c755;
       animation: text-glow 4s ease-in-out infinite alternate;
     }
@@ -201,7 +250,7 @@
       justify-content: center;
     }
     .bar-value {
-      font-size: 1.15em;
+      font-size: 1.11em;
       font-weight: bold;
       color: #fff;
       margin-bottom: 4px;
@@ -247,35 +296,24 @@
 <body>
   <div id="mirrors-bg"></div>
   <nav>
-    <div class="nav-logo">
-      Dysmorphia
+    <div class="nav-logo">Dysmorphia</div>
+    <button class="nav-menu-btn" id="navMenuBtn">&#9776;</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#mentalhealth">Mental Health</a>
+      <a href="#dysmorphia-teen">Dysmorphia</a>
+      <div class="nav-dropdown">
+        <a href="#">More ▼</a>
+        <div class="nav-dropdown-content">
+          <a href="#causes">Causes</a>
+          <a href="#effects">Effects</a>
+          <a href="#combat">How to Combat</a>
+          <a href="#campaign">Our Campaign</a>
+          <a href="#faq">FAQ</a>
+          <a href="#creators">Creators</a>
+        </div>
+      </div>
+      <a href="#bibliografia">References</a>
     </div>
-    <ul>
-      <li>
-        <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">Adolescent Mental Health</a>
-      </li>
-      <li>
-        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520805/" target="_blank">Dysmorphia in Adolescents</a>
-      </li>
-      <li>
-        <a href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/" target="_blank">Causes</a>
-      </li>
-      <li>
-        <a href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/" target="_blank">Effects</a>
-      </li>
-      <li>
-        <a href="https://iocdf.org/about-ocd/related-disorders/bdd/" target="_blank">How to Combat Dysmorphia</a>
-      </li>
-      <li>
-        <a href="#campaign">Our Campaign</a>
-      </li>
-      <li>
-        <a href="#faq">FAQ</a>
-      </li>
-      <li>
-        <a href="#creators">Creators</a>
-      </li>
-    </ul>
   </nav>
   <header id="intro">
     <h1>Dysmorphia</h1>
@@ -299,19 +337,19 @@
       <h2>Graph: Prevalence of Mental Disorders in Adolescents (Global)</h2>
       <div class="graph-container">
         <div class="bar-graph">
-          <div class="bar" style="height:45px;background:#6eb7e6;">
+          <div class="bar" style="height:160px;background:#6eb7e6;">
             <div class="bar-value">14%<br>(168 million)</div>
           </div>
           <div class="bar-label">Any mental disorder</div>
         </div>
         <div class="bar-graph">
-          <div class="bar" style="height:16px;background:#9fd3c7;">
+          <div class="bar" style="height:57px;background:#9fd3c7;">
             <div class="bar-value">5%<br>(60 million)</div>
           </div>
           <div class="bar-label">Depression</div>
         </div>
         <div class="bar-graph">
-          <div class="bar" style="height:13px;background:#284b63;">
+          <div class="bar" style="height:46px;background:#284b63;">
             <div class="bar-value">4%<br>(48 million)</div>
           </div>
           <div class="bar-label">Anxiety</div>
@@ -358,7 +396,7 @@
         <b>Description:</b> This graph compares the estimated percentage and number of adolescents diagnosed with body dysmorphia to those who experience body image concerns.
       </div>
     </section>
-    <!-- ...rest of the sections as before... -->
+    <!-- ... resto de las secciones igual que antes ... -->
     <section class="sr card" id="causes">
       <h2>Causes of dysmorphia in adolescents</h2>
       <ul>
@@ -465,7 +503,13 @@
     </p>
   </footer>
   <script>
-    // Moving mirrors background, dark style
+    // Mobile nav menu
+    const navBtn = document.getElementById('navMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    navBtn.onclick = function() {
+      navLinks.classList.toggle('show');
+    };
+    // Background mirrors
     function createMirrors(n = 15) {
       const bg = document.getElementById('mirrors-bg');
       let vw = window.innerWidth, vh = window.innerHeight;
@@ -482,7 +526,7 @@
         m.style.top = top+'px';
         m.style.transform = `scale(${scale}) rotate(${rot}deg)`;
         m.style.animationDelay = `${delay}s`;
-        m.style.opacity = 0.5 + Math.random()*0.3;
+        m.style.opacity = 0.3 + Math.random()*0.2;
         bg.appendChild(m);
       }
     }
