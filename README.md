@@ -396,7 +396,6 @@
         <b>Description:</b> This graph compares the estimated percentage and number of adolescents diagnosed with body dysmorphia to those who experience body image concerns.
       </div>
     </section>
-    <!-- ... resto de las secciones igual que antes ... -->
     <section class="sr card" id="causes">
       <h2>Causes of dysmorphia in adolescents</h2>
       <ul>
