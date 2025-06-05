@@ -349,7 +349,7 @@
           <div class="bar-label">Depression</div>
         </div>
         <div class="bar-graph">
-          <div class="bar" style="height:52px;background:#284b63;">
+          <div class="bar" style="height:51px;background:#284b63;">
             <div class="bar-value">4%<br>(48 million)</div>
           </div>
           <div class="bar-label">Anxiety</div>
