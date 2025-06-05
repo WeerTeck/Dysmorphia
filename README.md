@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dismorfia | Salud Mental en Adolescentes</title>
+  <title>Dysmorphia | Mental Health in Adolescents</title>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1580/1580981.png">
   <style>
@@ -38,7 +38,7 @@
     nav ul li a:hover, nav ul li a:focus { background: #284b63; color: #fff; }
     header {
       text-align: center;
-      padding-top: 70px; /* Soluciona el problema de la superposición */
+      padding-top: 70px;
     }
     main, footer { margin-top: 0; }
     @media (max-width: 700px) { nav ul { gap: 1em; } nav .nav-logo { font-size: 1em; } }
@@ -225,185 +225,185 @@
   <div id="mirrors-bg"></div>
   <nav>
     <div class="nav-logo">
-      Dismorfia
+      Dysmorphia
     </div>
     <ul>
       <li>
-        <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">Salud Mental en Adolescentes</a>
+        <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">Adolescent Mental Health</a>
       </li>
       <li>
-        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520805/" target="_blank">Dismorfia en Adolescentes</a>
+        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520805/" target="_blank">Dysmorphia in Adolescents</a>
       </li>
       <li>
-        <a href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/" target="_blank">Causas</a>
+        <a href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/" target="_blank">Causes</a>
       </li>
       <li>
-        <a href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/" target="_blank">Efectos</a>
+        <a href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/" target="_blank">Effects</a>
       </li>
       <li>
-        <a href="https://iocdf.org/about-ocd/related-disorders/bdd/" target="_blank">Cómo Combatir la Dismorfia</a>
+        <a href="https://iocdf.org/about-ocd/related-disorders/bdd/" target="_blank">How to Combat Dysmorphia</a>
       </li>
       <li>
-        <a href="#campaign">Nuestra Campaña</a>
+        <a href="#campaign">Our Campaign</a>
       </li>
       <li>
         <a href="#faq">FAQ</a>
       </li>
       <li>
-        <a href="#creators">Creadores</a>
+        <a href="#creators">Creators</a>
       </li>
     </ul>
   </nav>
   <header id="intro">
-    <h1>Dismorfia</h1>
-    <p class="subtitle">Salud mental y la imagen corporal en adolescentes</p>
+    <h1>Dysmorphia</h1>
+    <p class="subtitle">Mental health and body image in adolescents</p>
   </header>
   <main>
     <section class="sr card" id="mentalhealth">
-      <h2>¿Qué son los problemas de salud mental en adolescentes?</h2>
+      <h2>What are mental health issues in adolescents?</h2>
       <p>
-        Los <strong>problemas de salud mental en adolescentes</strong> incluyen ansiedad, depresión, trastornos alimentarios y más. Según la OMS, <b>1 de cada 7 adolescentes de 10 a 19 años</b> tiene algún trastorno mental.<br><br>
-        <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">Fuente: OMS</a>
+        <strong>Mental health problems in adolescents</strong> include anxiety, depression, eating disorders, and more. According to WHO, <b>1 in 7 adolescents aged 10-19</b> experiences a mental disorder.<br><br>
+        <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">Source: WHO</a>
       </p>
       <blockquote>
-        "La salud mental es tan importante como la salud física."
+        "Mental health is just as important as physical health."
       </blockquote>
       <div class="fact-box">
-        El suicidio es la <b>cuarta causa de muerte</b> en adolescentes de 15 a 19 años.
+        Suicide is the <b>fourth leading cause of death</b> among adolescents aged 15 to 19.
       </div>
     </section>
     <section class="graph-section sr">
-      <h2>Gráfico: Prevalencia de Trastornos Mentales en Adolescentes (Global)</h2>
+      <h2>Graph: Prevalence of Mental Disorders in Adolescents (Global)</h2>
       <div class="graph-container">
         <div class="bar-graph">
           <div class="bar" style="height:110px;background:#6eb7e6;"></div>
           <div class="bar-value">~14%</div>
-          <div class="bar-label">Cualquier trastorno mental</div>
+          <div class="bar-label">Any mental disorder</div>
         </div>
         <div class="bar-graph">
           <div class="bar" style="height:80px;background:#9fd3c7;"></div>
           <div class="bar-value">~5%</div>
-          <div class="bar-label">Depresión</div>
+          <div class="bar-label">Depression</div>
         </div>
         <div class="bar-graph">
           <div class="bar" style="height:65px;background:#284b63;"></div>
           <div class="bar-value">~4%</div>
-          <div class="bar-label">Ansiedad</div>
+          <div class="bar-label">Anxiety</div>
         </div>
       </div>
       <div style="font-size:0.95em;color:#9fd3c7">
-        Datos de la OMS (<a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">fuente</a>)
+        Data from WHO (<a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">source</a>)
       </div>
     </section>
     <section class="sr card" id="dysmorphia-teen">
-      <h2>Dismorfia en Adolescentes</h2>
+      <h2>Dysmorphia in Adolescents</h2>
       <p>
-        <strong>La dismorfia corporal</strong> es un trastorno en el que una persona se obsesiona con defectos percibidos en su apariencia física.<br>
-        Según estudios revisados por NCBI, afecta alrededor del <b>2% de los adolescentes</b> a nivel mundial.<br>
-        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520805/" target="_blank">Fuente: NCBI</a>
+        <strong>Body dysmorphia</strong> is a disorder in which a person becomes obsessed with perceived physical flaws.<br>
+        According to studies reviewed by NCBI, it affects about <b>2% of adolescents</b> worldwide.<br>
+        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520805/" target="_blank">Source: NCBI</a>
       </p>
       <div class="fact-box">
-        La presión social, las redes y los cambios físicos durante la adolescencia aumentan el riesgo.
+        Social pressure, media, and physical changes during adolescence increase the risk.
       </div>
     </section>
     <section class="graph-section sr">
-      <h2>Gráfico: Prevalencia de Dismorfia Corporal</h2>
+      <h2>Graph: Prevalence of Body Dysmorphia</h2>
       <div class="graph-container">
         <div class="bar-graph">
           <div class="bar" style="height:30px;background:#9fd3c7;"></div>
           <div class="bar-value">2%</div>
-          <div class="bar-label">Dismorfia diagnosticada</div>
+          <div class="bar-label">Diagnosed dysmorphia</div>
         </div>
         <div class="bar-graph">
           <div class="bar" style="height:100px;background:#6eb7e6;"></div>
-          <div class="bar-value">>50%</div>
-          <div class="bar-label">Preocupaciones por la imagen corporal</div>
+          <div class="bar-value">&gt;50%</div>
+          <div class="bar-label">Body image concerns</div>
         </div>
       </div>
       <div style="font-size:0.95em;color:#9fd3c7">
-        Estudios NCBI y UNICEF (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520805/" target="_blank">NCBI</a>, <a href="https://www.unicef.org/parenting/child-care/teens-and-body-image" target="_blank">UNICEF</a>)
+        Data from NCBI and UNICEF (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520805/" target="_blank">NCBI</a>, <a href="https://www.unicef.org/parenting/child-care/teens-and-body-image" target="_blank">UNICEF</a>)
       </div>
     </section>
     <section class="sr card" id="causes">
-      <h2>Causas de la dismorfia en adolescentes</h2>
+      <h2>Causes of dysmorphia in adolescents</h2>
       <ul>
-        <li><strong>Pubertad:</strong> Cambios físicos rápidos</li>
-        <li><strong>Redes sociales:</strong> Comparaciones y filtros</li>
-        <li><strong>Bullying:</strong> Burlas sobre el aspecto</li>
-        <li><strong>Familia/cultura:</strong> Presión para encajar</li>
-        <li><strong>Salud mental:</strong> Ansiedad, depresión, TOC</li>
+        <li><strong>Puberty:</strong> Rapid physical changes</li>
+        <li><strong>Social media:</strong> Comparisons and filters</li>
+        <li><strong>Bullying:</strong> Teasing about looks</li>
+        <li><strong>Family/culture:</strong> Pressure to fit in</li>
+        <li><strong>Mental health:</strong> Anxiety, depression, OCD</li>
       </ul>
-      <a href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/" target="_blank">Fuente: Mind</a>
+      <a href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/" target="_blank">Source: Mind</a>
     </section>
     <section class="sr card" id="effects">
-      <h2>Efectos de la dismorfia corporal en adolescentes</h2>
+      <h2>Effects of body dysmorphia in adolescents</h2>
       <ul>
-        <li>Baja autoestima</li>
-        <li>Evitar espejos o revisión obsesiva</li>
-        <li>Aislamiento</li>
-        <li>Trastornos alimentarios, depresión, autolesiones</li>
-        <li>Bajo rendimiento escolar</li>
+        <li>Low self-esteem</li>
+        <li>Avoiding or obsessively checking mirrors</li>
+        <li>Isolation</li>
+        <li>Eating disorders, depression, self-harm</li>
+        <li>Poor school performance</li>
       </ul>
       <blockquote>
-        "Un espejo puede ser fuente de dolor en vez de reflexión."
+        "A mirror can become a source of pain instead of reflection."
       </blockquote>
-      <a href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/" target="_blank">Fuente: Mind</a>
+      <a href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/" target="_blank">Source: Mind</a>
     </section>
     <section class="sr card" id="combat">
-      <h2>Cómo combatir y prevenir la dismorfia</h2>
+      <h2>How to combat and prevent dysmorphia</h2>
       <ul>
-        <li><b>Hablar:</b> Compartir preocupaciones</li>
-        <li><b>Limitar redes:</b> Alejarse de cuentas negativas</li>
-        <li><b>Enfocar en fortalezas:</b> Valorar talentos no físicos</li>
-        <li><b>Alfabetización mediática:</b> Saber que las imágenes suelen estar retocadas</li>
-        <li><b>Buscar ayuda profesional</b></li>
+        <li><b>Talk about it:</b> Share your concerns</li>
+        <li><b>Limit social media:</b> Unfollow negative accounts</li>
+        <li><b>Focus on strengths:</b> Value non-physical talents</li>
+        <li><b>Media literacy:</b> Know that most images are retouched</li>
+        <li><b>Seek professional help</b></li>
       </ul>
       <div class="fact-box">
-        La prevención comienza con la aceptación y la información.<br>
-        <a href="https://iocdf.org/about-ocd/related-disorders/bdd/" target="_blank">Fuente: IOCDF</a>
+        Prevention starts with acceptance and information.<br>
+        <a href="https://iocdf.org/about-ocd/related-disorders/bdd/" target="_blank">Source: IOCDF</a>
       </div>
     </section>
     <section class="sr card" id="campaign">
-      <h2>Nuestra campaña: “Mírate con claridad”</h2>
+      <h2>Our campaign: “See Yourself Clearly”</h2>
       <ul>
-        <li><b>Concientización:</b> Charlas en escuelas</li>
-        <li><b>Autoaceptación:</b> Historias y recursos reales</li>
-        <li><b>Luchar contra el estigma:</b> Espacios de diálogo</li>
-        <li><b>Apoyo entre pares:</b> Grupos y recursos</li>
+        <li><b>Awareness:</b> School talks and workshops</li>
+        <li><b>Self-acceptance:</b> Real stories and resources</li>
+        <li><b>Fight stigma:</b> Safe spaces for open discussion</li>
+        <li><b>Peer support:</b> Groups and resources</li>
       </ul>
       <div class="fact-box">
-        ¡Sumate! <span style="color:#9fd3c7"><b>#MirateConClaridad</b></span>
+        Join us! <span style="color:#9fd3c7"><b>#SeeYourselfClearly</b></span>
       </div>
     </section>
     <section class="sr card" id="faq">
-      <h2>Preguntas frecuentes</h2>
+      <h2>Frequently Asked Questions</h2>
       <ul class="faq-list">
         <li class="faq-item">
-          <div class="faq-q">¿Cuáles son los problemas más comunes?</div>
-          <div class="faq-a">Ansiedad, depresión, trastornos alimentarios, autolesiones, preocupaciones por la imagen.</div>
+          <div class="faq-q">What are the most common problems?</div>
+          <div class="faq-a">Anxiety, depression, eating disorders, self-harm, body image concerns.</div>
         </li>
         <li class="faq-item">
-          <div class="faq-q">¿La dismorfia afecta a varones?</div>
-          <div class="faq-a">Sí, puede afectar a cualquier género.</div>
+          <div class="faq-q">Does dysmorphia affect boys?</div>
+          <div class="faq-a">Yes, it can affect any gender.</div>
         </li>
         <li class="faq-item">
-          <div class="faq-q">¿Las redes sociales influyen mucho?</div>
-          <div class="faq-a">Sí, pero también pueden ayudar si sigues cuentas positivas.</div>
+          <div class="faq-q">Does social media have a big influence?</div>
+          <div class="faq-a">Yes, but positive accounts can help too.</div>
         </li>
         <li class="faq-item">
-          <div class="faq-q">¿Cómo ayudar a un amigo?</div>
-          <div class="faq-a">Escuchar, apoyar y recomendar ayuda profesional si es necesario.</div>
+          <div class="faq-q">How can I help a friend?</div>
+          <div class="faq-a">Listen, support, and recommend professional help if needed.</div>
         </li>
       </ul>
     </section>
     <section class="sr card" id="creators">
-      <h2>Creadores</h2>
+      <h2>Creators</h2>
       <p>
-        Página creada por <strong>Lucas De Cesare, Bautista Acerbo y Santiago Martinez</strong> como proyecto escolar para concientizar sobre dismorfia y salud mental en adolescentes.
+        Page created by <strong>Lucas De Cesare, Bautista Acerbo, and Santiago Martinez</strong> as a school project to raise awareness about dysmorphia and adolescent mental health.
       </p>
     </section>
     <section class="source-list" id="bibliografia">
-      <h3>Bibliografía</h3>
+      <h3>References</h3>
       <ul>
         <li>
           World Health Organization. (2021). <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">Adolescent Mental Health</a>.
@@ -424,9 +424,9 @@
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Dismorfia Awareness - Proyecto Escolar</p>
+    <p>&copy; 2025 Dysmorphia Awareness - School Project</p>
     <p>
-      <a href="#intro" style="color: #9fd3c7;">↑ Volver arriba</a>
+      <a href="#intro" style="color: #9fd3c7;">↑ Back to top</a>
     </p>
   </footer>
   <script>
