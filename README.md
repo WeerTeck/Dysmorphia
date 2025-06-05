@@ -299,19 +299,19 @@
       <h2>Graph: Prevalence of Mental Disorders in Adolescents (Global)</h2>
       <div class="graph-container">
         <div class="bar-graph">
-          <div class="bar" style="height:150px;background:#6eb7e6;">
+          <div class="bar" style="height:45px;background:#6eb7e6;">
             <div class="bar-value">14%<br>(168 million)</div>
           </div>
           <div class="bar-label">Any mental disorder</div>
         </div>
         <div class="bar-graph">
-          <div class="bar" style="height:110px;background:#9fd3c7;">
+          <div class="bar" style="height:16px;background:#9fd3c7;">
             <div class="bar-value">5%<br>(60 million)</div>
           </div>
           <div class="bar-label">Depression</div>
         </div>
         <div class="bar-graph">
-          <div class="bar" style="height:90px;background:#284b63;">
+          <div class="bar" style="height:13px;background:#284b63;">
             <div class="bar-value">4%<br>(48 million)</div>
           </div>
           <div class="bar-label">Anxiety</div>
@@ -345,7 +345,7 @@
           <div class="bar-label">Body image concerns</div>
         </div>
         <div class="bar-graph">
-          <div class="bar" style="height:35px;background:#9fd3c7;">
+          <div class="bar" style="height:6px;background:#9fd3c7;">
             <div class="bar-value">2%<br>(24 million)</div>
           </div>
           <div class="bar-label">Diagnosed dysmorphia</div>
@@ -358,6 +358,7 @@
         <b>Description:</b> This graph compares the estimated percentage and number of adolescents diagnosed with body dysmorphia to those who experience body image concerns.
       </div>
     </section>
+    <!-- ...rest of the sections as before... -->
     <section class="sr card" id="causes">
       <h2>Causes of dysmorphia in adolescents</h2>
       <ul>
