@@ -178,7 +178,7 @@
       margin-bottom: 1em;
     }
     .bar-graph {
-      width: 80px;
+      width: 110px;
       background: linear-gradient(180deg, #9fd3c7 80%, #284b63 100%);
       border-radius: 13px 13px 0 0;
       display: flex;
@@ -205,6 +205,7 @@
       font-weight: bold;
       color: #9fd3c7;
       margin-bottom: 4px;
+      line-height:1.2;
     }
     footer {
       text-align: center; font-size: 0.97rem; color: #6eb7e6; padding: 1.5rem 0; border-top: 1.5px solid #23344a;
@@ -216,8 +217,10 @@
       h2 { font-size: 1.3rem;}
       .card { padding: 1.1rem 0.7rem;}
       .graph-container { flex-direction: column; align-items: center;}
+      .bar-graph { width: 90px;}
     }
     @media (max-width: 480px) {
+      .bar-graph { width: 70px;}
     }
   </style>
 </head>
@@ -276,23 +279,26 @@
       <h2>Graph: Prevalence of Mental Disorders in Adolescents (Global)</h2>
       <div class="graph-container">
         <div class="bar-graph">
-          <div class="bar" style="height:110px;background:#6eb7e6;"></div>
-          <div class="bar-value">~14%</div>
+          <div class="bar" style="height:140px;background:#6eb7e6;"></div>
+          <div class="bar-value">14%<br><span style="font-size:0.9em;">(~168 million)</span></div>
           <div class="bar-label">Any mental disorder</div>
         </div>
         <div class="bar-graph">
-          <div class="bar" style="height:80px;background:#9fd3c7;"></div>
-          <div class="bar-value">~5%</div>
+          <div class="bar" style="height:100px;background:#9fd3c7;"></div>
+          <div class="bar-value">5%<br><span style="font-size:0.9em;">(~60 million)</span></div>
           <div class="bar-label">Depression</div>
         </div>
         <div class="bar-graph">
-          <div class="bar" style="height:65px;background:#284b63;"></div>
-          <div class="bar-value">~4%</div>
+          <div class="bar" style="height:80px;background:#284b63;"></div>
+          <div class="bar-value">4%<br><span style="font-size:0.9em;">(~48 million)</span></div>
           <div class="bar-label">Anxiety</div>
         </div>
       </div>
       <div style="font-size:0.95em;color:#9fd3c7">
-        Data from WHO (<a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">source</a>)
+        Source: WHO, 2021 (<a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">link</a>)
+      </div>
+      <div style="color:#e3eaf2;font-size:0.98em;margin-top:1em;">
+        <b>Description:</b> This graph displays the estimated global percentage and total number of adolescents affected by any mental disorder, depression, and anxiety. The data shows that mental disorders affect a significant number of young people worldwide.
       </div>
     </section>
     <section class="sr card" id="dysmorphia-teen">
@@ -307,21 +313,24 @@
       </div>
     </section>
     <section class="graph-section sr">
-      <h2>Graph: Prevalence of Body Dysmorphia</h2>
+      <h2>Graph: Prevalence of Body Dysmorphia and Body Image Concerns</h2>
       <div class="graph-container">
         <div class="bar-graph">
-          <div class="bar" style="height:30px;background:#9fd3c7;"></div>
-          <div class="bar-value">2%</div>
-          <div class="bar-label">Diagnosed dysmorphia</div>
+          <div class="bar" style="height:150px;background:#6eb7e6;"></div>
+          <div class="bar-value">&gt;50%<br><span style="font-size:0.9em;">(~600 million)</span></div>
+          <div class="bar-label">Body image concerns</div>
         </div>
         <div class="bar-graph">
-          <div class="bar" style="height:100px;background:#6eb7e6;"></div>
-          <div class="bar-value">&gt;50%</div>
-          <div class="bar-label">Body image concerns</div>
+          <div class="bar" style="height:30px;background:#9fd3c7;"></div>
+          <div class="bar-value">2%<br><span style="font-size:0.9em;">(~24 million)</span></div>
+          <div class="bar-label">Diagnosed dysmorphia</div>
         </div>
       </div>
       <div style="font-size:0.95em;color:#9fd3c7">
-        Data from NCBI and UNICEF (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520805/" target="_blank">NCBI</a>, <a href="https://www.unicef.org/parenting/child-care/teens-and-body-image" target="_blank">UNICEF</a>)
+        Sources: NCBI, UNICEF (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520805/" target="_blank">NCBI</a>, <a href="https://www.unicef.org/parenting/child-care/teens-and-body-image" target="_blank">UNICEF</a>)
+      </div>
+      <div style="color:#e3eaf2;font-size:0.98em;margin-top:1em;">
+        <b>Description:</b> This graph compares the estimated percentage and number of adolescents diagnosed with body dysmorphia to those who experience body image concerns. While diagnosed cases are relatively rare, over half of all adolescents struggle with concerns about their appearance.
       </div>
     </section>
     <section class="sr card" id="causes">
