@@ -337,19 +337,19 @@
       <h2>Graph: Prevalence of Mental Disorders in Adolescents (Global)</h2>
       <div class="graph-container">
         <div class="bar-graph">
-          <div class="bar" style="height:160px;background:#6eb7e6;">
+          <div class="bar" style="height:180px;background:#6eb7e6;">
             <div class="bar-value">14%<br>(168 million)</div>
           </div>
           <div class="bar-label">Any mental disorder</div>
         </div>
         <div class="bar-graph">
-          <div class="bar" style="height:57px;background:#9fd3c7;">
+          <div class="bar" style="height:64px;background:#9fd3c7;">
             <div class="bar-value">5%<br>(60 million)</div>
           </div>
           <div class="bar-label">Depression</div>
         </div>
         <div class="bar-graph">
-          <div class="bar" style="height:46px;background:#284b63;">
+          <div class="bar" style="height:52px;background:#284b63;">
             <div class="bar-value">4%<br>(48 million)</div>
           </div>
           <div class="bar-label">Anxiety</div>
@@ -377,13 +377,13 @@
       <h2>Graph: Prevalence of Body Dysmorphia and Body Image Concerns</h2>
       <div class="graph-container">
         <div class="bar-graph">
-          <div class="bar" style="height:160px;background:#6eb7e6;">
+          <div class="bar" style="height:180px;background:#6eb7e6;">
             <div class="bar-value">&gt;50%<br>(600 million)</div>
           </div>
           <div class="bar-label">Body image concerns</div>
         </div>
         <div class="bar-graph">
-          <div class="bar" style="height:6px;background:#9fd3c7;">
+          <div class="bar" style="height:7px;background:#9fd3c7;">
             <div class="bar-value">2%<br>(24 million)</div>
           </div>
           <div class="bar-label">Diagnosed dysmorphia</div>
