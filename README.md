@@ -36,12 +36,16 @@
       transition: background 0.2s, color 0.2s;
     }
     nav ul li a:hover, nav ul li a:focus { background: #284b63; color: #fff; }
-    header, main, footer { margin-top: 56px; }
+    header {
+      text-align: center;
+      padding-top: 70px; /* Soluciona el problema de la superposición */
+    }
+    main, footer { margin-top: 0; }
     @media (max-width: 700px) { nav ul { gap: 1em; } nav .nav-logo { font-size: 1em; } }
     @media (max-width: 520px) {
       nav { font-size: 0.97em; padding: 0 1vw;}
       nav ul { gap: 0.6em;}
-      header, main, footer { margin-top: 65px;}
+      header { padding-top: 80px;}
     }
     #mirrors-bg {
       position: fixed;
@@ -87,7 +91,6 @@
     header, main, footer {
       position: relative; z-index: 2; max-width: 920px; width: 93%; margin: auto; padding: 1.6rem 0;
     }
-    header { text-align: center; }
     h1 {
       font-family: 'Quicksand', sans-serif;
       font-weight: 700; font-size: 2.9rem; color: #6eb7e6; margin-bottom: 0.3rem;
