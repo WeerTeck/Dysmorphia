@@ -214,6 +214,35 @@
       text-align: center; font-size: 0.97rem; color: #6eb7e6; padding: 1.5rem 0; border-top: 1.5px solid #23344a;
       margin-top: auto; background: linear-gradient(90deg, #1e2a38, #23344a); letter-spacing: 1px; z-index: 2;
     }
+    /* FAQ styles */
+    .faq-q {
+      background: #23344a;
+      color: #9fd3c7;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.07em;
+      font-weight: bold;
+      padding: 9px 0;
+      border-radius: 7px;
+      cursor: pointer;
+      outline: none;
+      margin-bottom: 3px;
+      transition: background 0.2s;
+    }
+    .faq-q.open, .faq-q:hover { background: #284b63; color: #fff; }
+    .faq-a {
+      padding: 8px 0 8px 16px;
+      color: #e3eaf2;
+      font-size: 0.98em;
+      margin-bottom: 10px;
+      background: none;
+      border-left: 3px solid #6eb7e6;
+      border-radius: 0 7px 7px 0;
+      transition: all 0.3s;
+      display: none;
+    }
     @media (max-width: 900px) { header, main, footer { width: 98%; } }
     @media (max-width: 768px) {
       h1 { font-size: 2.2rem;}
@@ -256,9 +285,18 @@
         <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">Source: WHO</a>
       </p>
       <ul style="margin-bottom:1.1em;">
-        <li><b>Global prevalence of any mental disorder:</b> 14% (168 million adolescents)</li>
-        <li><b>Depression:</b> 5% (60 million adolescents)</li>
-        <li><b>Anxiety:</b> 4% (48 million adolescents)</li>
+        <li>
+          <b>Global prevalence of any mental disorder:</b>
+          <span class="counter" data-target="168000000">0</span> adolescentes (14%)
+        </li>
+        <li>
+          <b>Depression:</b>
+          <span class="counter" data-target="60000000">0</span> adolescentes (5%)
+        </li>
+        <li>
+          <b>Anxiety:</b>
+          <span class="counter" data-target="48000000">0</span> adolescentes (4%)
+        </li>
       </ul>
       <blockquote>
         "Mental health is just as important as physical health."
@@ -275,8 +313,14 @@
         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520805/" target="_blank">Source: NCBI</a>
       </p>
       <ul style="margin-bottom:1.1em;">
-        <li><b>Adolescents with body image concerns:</b> Over 50% (about 600 million adolescents worldwide)</li>
-        <li><b>Diagnosed body dysmorphia:</b> 2% (about 24 million adolescents worldwide)</li>
+        <li>
+          <b>Adolescents with body image concerns:</b>
+          <span class="counter" data-target="600000000">0</span> (over 50% worldwide)
+        </li>
+        <li>
+          <b>Diagnosed body dysmorphia:</b>
+          <span class="counter" data-target="24000000">0</span> (2% worldwide)
+        </li>
       </ul>
       <div class="fact-box">
         Social pressure, media, and physical changes during adolescence increase the risk.
@@ -337,19 +381,19 @@
       <h2>Frequently Asked Questions</h2>
       <ul class="faq-list">
         <li class="faq-item">
-          <div class="faq-q">What are the most common problems?</div>
+          <button class="faq-q" type="button">What are the most common problems?</button>
           <div class="faq-a">Anxiety, depression, eating disorders, self-harm, body image concerns.</div>
         </li>
         <li class="faq-item">
-          <div class="faq-q">Does dysmorphia affect boys?</div>
+          <button class="faq-q" type="button">Does dysmorphia affect boys?</button>
           <div class="faq-a">Yes, it can affect any gender.</div>
         </li>
         <li class="faq-item">
-          <div class="faq-q">Does social media have a big influence?</div>
+          <button class="faq-q" type="button">Does social media have a big influence?</button>
           <div class="faq-a">Yes, but positive accounts can help too.</div>
         </li>
         <li class="faq-item">
-          <div class="faq-q">How can I help a friend?</div>
+          <button class="faq-q" type="button">How can I help a friend?</button>
           <div class="faq-a">Listen, support, and recommend professional help if needed.</div>
         </li>
       </ul>
@@ -438,6 +482,40 @@
       }
       window.addEventListener('scroll', scrollReveal);
       scrollReveal();
+    });
+    // Contador animado para los datos
+    function animateCounters() {
+      const counters = document.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const current = +counter.innerText.replace(/,/g, '');
+          const increment = Math.max(Math.ceil(target / 100), 1);
+          if (current < target) {
+            let next = current + increment;
+            if (next > target) next = target;
+            counter.innerText = next.toLocaleString();
+            setTimeout(updateCount, 16);
+          } else {
+            counter.innerText = target.toLocaleString();
+          }
+        };
+        updateCount();
+      });
+    }
+    window.addEventListener('DOMContentLoaded', animateCounters);
+
+    // FAQ interactivo
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const ans = btn.nextElementSibling;
+          ans.style.display = (ans.style.display === 'block') ? 'none' : 'block';
+          btn.classList.toggle('open');
+        });
+      });
+      // Ocultar todas las respuestas al inicio
+      document.querySelectorAll('.faq-a').forEach(a => a.style.display = 'none');
     });
   </script>
 </body>
