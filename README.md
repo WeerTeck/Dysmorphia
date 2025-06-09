@@ -210,71 +210,6 @@
       margin: 0;
       padding: 0;
     }
-    .graph-section {
-      margin-bottom: 2.7rem;
-    }
-    .graph-section h2 {
-      font-size: 1.2em;
-      color: #9fd3c7;
-      margin-bottom: 1em;
-    }
-    .graph-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2em;
-      justify-content: center;
-      align-items: flex-end;
-      margin-bottom: 1em;
-    }
-    .bar-graph {
-      width: 130px;
-      background: linear-gradient(180deg, #9fd3c7 80%, #284b63 100%);
-      border-radius: 13px 13px 0 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0 9px;
-      text-align: center;
-      box-shadow: 0 2px 14px #284b6322;
-      color: #fff;
-      position: relative;
-    }
-    .bar {
-      width: 100%;
-      border-radius: 13px 13px 0 0;
-      transition: height 1s;
-      margin-bottom: 5px;
-      position: relative;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-    }
-    .bar-value {
-      font-size: 1.11em;
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 4px;
-      line-height:1.2;
-      background: #23344ab8;
-      border-radius: 8px;
-      padding: 2px 6px 2px 6px;
-      position: absolute;
-      top: -35px;
-      left: 50%;
-      transform: translateX(-50%);
-      min-width: 80px;
-      box-sizing: border-box;
-      z-index: 1;
-    }
-    .bar-label {
-      font-size: 1em;
-      margin-bottom: 7px;
-      color: #e3eaf2;
-      margin-top: 10px;
-      line-height: 1.1;
-      font-family: 'Quicksand', sans-serif;
-      font-weight: 700;
-    }
     footer {
       text-align: center; font-size: 0.97rem; color: #6eb7e6; padding: 1.5rem 0; border-top: 1.5px solid #23344a;
       margin-top: auto; background: linear-gradient(90deg, #1e2a38, #23344a); letter-spacing: 1px; z-index: 2;
@@ -284,12 +219,6 @@
       h1 { font-size: 2.2rem;}
       h2 { font-size: 1.3rem;}
       .card { padding: 1.1rem 0.7rem;}
-      .graph-container { flex-direction: column; align-items: center;}
-      .bar-graph { width: 90px;}
-    }
-    @media (max-width: 480px) {
-      .bar-graph { width: 70px;}
-      .bar-value { min-width: 60px;}
     }
   </style>
 </head>
@@ -326,40 +255,16 @@
         <strong>Mental health problems in adolescents</strong> include anxiety, depression, eating disorders, and more. According to WHO, <b>1 in 7 adolescents aged 10-19</b> experiences a mental disorder.<br><br>
         <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">Source: WHO</a>
       </p>
+      <ul style="margin-bottom:1.1em;">
+        <li><b>Global prevalence of any mental disorder:</b> 14% (168 million adolescents)</li>
+        <li><b>Depression:</b> 5% (60 million adolescents)</li>
+        <li><b>Anxiety:</b> 4% (48 million adolescents)</li>
+      </ul>
       <blockquote>
         "Mental health is just as important as physical health."
       </blockquote>
       <div class="fact-box">
         Suicide is the <b>fourth leading cause of death</b> among adolescents aged 15 to 19.
-      </div>
-    </section>
-    <section class="graph-section sr">
-      <h2>Graph: Prevalence of Mental Disorders in Adolescents (Global)</h2>
-      <div class="graph-container">
-        <div class="bar-graph">
-          <div class="bar" style="height:180px;background:#6eb7e6;">
-            <div class="bar-value">14%<br>(168 million)</div>
-          </div>
-          <div class="bar-label">Any mental disorder</div>
-        </div>
-        <div class="bar-graph">
-          <div class="bar" style="height:64px;background:#9fd3c7;">
-            <div class="bar-value">5%<br>(60 million)</div>
-          </div>
-          <div class="bar-label">Depression</div>
-        </div>
-        <div class="bar-graph">
-          <div class="bar" style="height:51px;background:#284b63;">
-            <div class="bar-value">4%<br>(48 million)</div>
-          </div>
-          <div class="bar-label">Anxiety</div>
-        </div>
-      </div>
-      <div style="font-size:0.95em;color:#9fd3c7">
-        Source: WHO, 2021 (<a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">link</a>)
-      </div>
-      <div style="color:#e3eaf2;font-size:0.98em;margin-top:1em;">
-        <b>Description:</b> This graph shows the estimated global percentage and number of adolescents affected by any mental disorder, depression, and anxiety.
       </div>
     </section>
     <section class="sr card" id="dysmorphia-teen">
@@ -369,31 +274,12 @@
         According to studies reviewed by NCBI, it affects about <b>2% of adolescents</b> worldwide.<br>
         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520805/" target="_blank">Source: NCBI</a>
       </p>
+      <ul style="margin-bottom:1.1em;">
+        <li><b>Adolescents with body image concerns:</b> Over 50% (about 600 million adolescents worldwide)</li>
+        <li><b>Diagnosed body dysmorphia:</b> 2% (about 24 million adolescents worldwide)</li>
+      </ul>
       <div class="fact-box">
         Social pressure, media, and physical changes during adolescence increase the risk.
-      </div>
-    </section>
-    <section class="graph-section sr">
-      <h2>Graph: Prevalence of Body Dysmorphia and Body Image Concerns</h2>
-      <div class="graph-container">
-        <div class="bar-graph">
-          <div class="bar" style="height:180px;background:#6eb7e6;">
-            <div class="bar-value">&gt;50%<br>(600 million)</div>
-          </div>
-          <div class="bar-label">Body image concerns</div>
-        </div>
-        <div class="bar-graph">
-          <div class="bar" style="height:7px;background:#9fd3c7;">
-            <div class="bar-value">2%<br>(24 million)</div>
-          </div>
-          <div class="bar-label">Diagnosed dysmorphia</div>
-        </div>
-      </div>
-      <div style="font-size:0.95em;color:#9fd3c7">
-        Sources: NCBI, UNICEF (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520805/" target="_blank">NCBI</a>, <a href="https://www.unicef.org/parenting/child-care/teens-and-body-image" target="_blank">UNICEF</a>)
-      </div>
-      <div style="color:#e3eaf2;font-size:0.98em;margin-top:1em;">
-        <b>Description:</b> This graph compares the estimated percentage and number of adolescents diagnosed with body dysmorphia to those who experience body image concerns.
       </div>
     </section>
     <section class="sr card" id="causes">
