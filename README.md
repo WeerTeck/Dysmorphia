@@ -306,21 +306,29 @@
     <section class="sr card" id="mentalhealth">
       <h2>What are mental health issues in adolescents?</h2>
       <p>
-        <strong class="highlight-on-hover">Mental health problems in adolescents</strong> include anxiety, depression, eating disorders, and more. According to WHO, <b>1 in 7 adolescents aged 10-19</b> experiences a mental disorder.<br><br>
+        <strong class="highlight-on-hover">Mental health problems in adolescents</strong> include anxiety, depression, eating disorders, self-harm, and more. According to WHO, <b>1 in 7 adolescents aged 10-19</b> experiences a mental disorder.<br><br>
         <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">Source: WHO</a>
       </p>
       <ul style="margin-bottom:1.1em;">
         <li>
           <b>Global prevalence of any mental disorder:</b>
-          <span class="counter" data-target="168000000">0</span> adolescentes (14%)
+          <span class="counter" data-target="168000000">0</span> adolescents (14%)
         </li>
         <li>
           <b>Depression:</b>
-          <span class="counter" data-target="60000000">0</span> adolescentes (5%)
+          <span class="counter" data-target="60000000">0</span> adolescents (5%)
         </li>
         <li>
           <b>Anxiety:</b>
-          <span class="counter" data-target="48000000">0</span> adolescentes (4%)
+          <span class="counter" data-target="48000000">0</span> adolescents (4%)
+        </li>
+        <li>
+          <b>Eating disorders:</b>
+          <span class="counter" data-target="40000000">0</span> adolescents (3.3%)
+        </li>
+        <li>
+          <b>Self-harm:</b>
+          <span class="counter" data-target="25000000">0</span> adolescents (2.1%)
         </li>
       </ul>
       <blockquote>
@@ -331,10 +339,15 @@
       </div>
     </section>
     <section class="sr card" id="dysmorphia-teen">
-      <h2>Dysmorphia in Adolescents</h2>
+      <h2>What is Body Dysmorphia?</h2>
       <p>
-        <strong class="highlight-on-hover">Body dysmorphia</strong> is a disorder in which a person becomes obsessed with perceived physical flaws.<br>
-        According to studies reviewed by NCBI, it affects about <b>2% of adolescents</b> worldwide.<br>
+        <strong class="highlight-on-hover">Body dysmorphia</strong> (Body Dysmorphic Disorder, BDD) is a mental health condition where a person spends a lot of time worrying about flaws in their appearance. These flaws are often unnoticeable to others.<br>
+        <span style="color:#9fd3c7"><b>Key facts:</b></span>
+        <ul>
+          <li>BDD can begin as early as 12–13 years old and often gets worse over time if untreated.</li>
+          <li>It affects about <b>2%–3% of adolescents</b> worldwide, but body image concerns are much more common.</li>
+          <li>Young people with dysmorphia may avoid social situations, mirrors, or spend hours trying to change their appearance.</li>
+        </ul>
         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520805/" target="_blank">Source: NCBI</a>
       </p>
       <ul style="margin-bottom:1.1em;">
@@ -346,30 +359,49 @@
           <b>Diagnosed body dysmorphia:</b>
           <span class="counter" data-target="24000000">0</span> (2% worldwide)
         </li>
+        <li>
+          <b>Girls are slightly more likely to report body image issues, but BDD affects all genders.</b>
+        </li>
       </ul>
       <div class="fact-box">
-        Social pressure, media, and physical changes during adolescence increase the risk.
+        <b>Symptoms:</b><br>
+        - Obsessively thinking about perceived flaws<br>
+        - Excessive grooming or mirror checking<br>
+        - Seeking cosmetic procedures<br>
+        - Comparing appearance to others constantly<br>
+        - Low self-esteem, anxiety, or depression<br>
+        <a href="https://iocdf.org/about-ocd/related-disorders/bdd/bdd-in-children-and-adolescents/" target="_blank">More info: IOCDF</a>
+      </div>
+      <div class="fact-box">
+        <b>Did you know?</b> Teens with BDD are at higher risk for eating disorders, substance abuse, social withdrawal, and suicidal thoughts.
       </div>
     </section>
     <section class="sr card" id="causes">
       <h2>Causes of dysmorphia in adolescents</h2>
       <ul>
-        <li><strong class="highlight-on-hover">Puberty:</strong> Rapid physical changes</li>
-        <li><strong>Social media:</strong> Comparisons and filters</li>
-        <li><strong>Bullying:</strong> Teasing about looks</li>
-        <li><strong>Family/culture:</strong> Pressure to fit in</li>
-        <li><strong>Mental health:</strong> Anxiety, depression, OCD</li>
+        <li><strong class="highlight-on-hover">Puberty:</strong> Rapid body changes can lead to confusion and insecurity.</li>
+        <li><strong>Social media:</strong> Unrealistic beauty standards, filters, and constant comparison increase dissatisfaction.</li>
+        <li><strong>Bullying:</strong> Teasing or criticism about looks can trigger negative self-image.</li>
+        <li><strong>Family/culture:</strong> Pressure to fit in or meet certain norms.</li>
+        <li><strong>Mental health:</strong> Anxiety, depression, or obsessive-compulsive tendencies raise the risk.</li>
+        <li><strong>Low self-esteem:</strong> Feeling “not good enough” or unworthy.</li>
+        <li><strong>Genetics:</strong> Having a family member with BDD or OCD can increase risk.</li>
       </ul>
       <a href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/" target="_blank">Source: Mind</a>
     </section>
     <section class="sr card" id="effects">
       <h2>Effects of body dysmorphia in adolescents</h2>
       <ul>
-        <li><span class="popword">Low self-esteem</span></li>
+        <li><span class="popword">Low self-esteem</span> and negative self-image</li>
         <li>Avoiding or obsessively checking mirrors</li>
-        <li>Isolation</li>
-        <li>Eating disorders, depression, self-harm</li>
-        <li>Poor school performance</li>
+        <li>Withdrawing from friends, family, or activities</li>
+        <li>Problems at school (concentration, absenteeism, poor grades)</li>
+        <li>Eating disorders (anorexia, bulimia, binge eating)</li>
+        <li>Excessive exercise or unhealthy dieting</li>
+        <li>Self-harm or suicidal thoughts</li>
+        <li>Seeking cosmetic surgery (even when not recommended)</li>
+        <li>Anxiety and depression</li>
+        <li>Substance abuse</li>
       </ul>
       <blockquote>
         "A mirror can become a source of pain instead of reflection."
@@ -379,11 +411,14 @@
     <section class="sr card" id="combat">
       <h2>How to combat and prevent dysmorphia</h2>
       <ul>
-        <li><b class="popword">Talk about it:</b> Share your concerns</li>
-        <li><b>Limit social media:</b> Unfollow negative accounts</li>
-        <li><b>Focus on strengths:</b> Value non-physical talents</li>
-        <li><b>Media literacy:</b> Know that most images are retouched</li>
-        <li><b>Seek professional help</b></li>
+        <li><b class="popword">Talk about it:</b> Share your concerns with someone you trust (friend, parent, counselor).</li>
+        <li><b>Limit social media:</b> Unfollow negative accounts and spend less time comparing yourself to others.</li>
+        <li><b>Focus on strengths:</b> Value non-physical talents and qualities.</li>
+        <li><b>Media literacy:</b> Know that most images are retouched, filtered, or staged.</li>
+        <li><b>Seek professional help:</b> Psychologists, psychiatrists, and counselors can help with therapy and coping skills.</li>
+        <li><b>Practice self-compassion:</b> Treat yourself with the same kindness you’d offer a friend.</li>
+        <li><b>Support groups:</b> Sharing with others can reduce stigma and provide hope.</li>
+        <li><b>Healthy routines:</b> Sleep, exercise, and eating well improve mood and resilience.</li>
       </ul>
       <div class="fact-box">
         Prevention starts with <span class="highlight-on-hover">acceptance</span> and information.<br>
@@ -397,6 +432,8 @@
         <li><b>Self-acceptance:</b> Real stories and resources</li>
         <li><b>Fight stigma:</b> Safe spaces for open discussion</li>
         <li><b>Peer support:</b> Groups and resources</li>
+        <li><b>Encourage positive self-talk</b></li>
+        <li><b>Advocate for healthier media</b></li>
       </ul>
       <div class="fact-box">
         Join us! <span style="color:#9fd3c7"><b>#SeeYourselfClearly</b></span>
@@ -421,6 +458,14 @@
           <button class="faq-q" type="button">How can I help a friend?</button>
           <div class="faq-a">Listen, support, and recommend professional help if needed.</div>
         </li>
+        <li class="faq-item">
+          <button class="faq-q" type="button">Can dysmorphia lead to other problems?</button>
+          <div class="faq-a">Yes, it can increase the risk of eating disorders, depression, anxiety, and suicidal thoughts.</div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-q" type="button">Is it treatable?</button>
+          <div class="faq-a">Yes! With therapy and support, most young people see improvement.</div>
+        </li>
       </ul>
     </section>
     <section class="sr card" id="creators">
@@ -443,6 +488,9 @@
         </li>
         <li>
           IOCDF. (2023). About BDD. <a href="https://iocdf.org/about-ocd/related-disorders/bdd/" target="_blank">iocdf.org</a>.
+        </li>
+        <li>
+          IOCDF: BDD in Children and Adolescents. <a href="https://iocdf.org/about-ocd/related-disorders/bdd/bdd-in-children-and-adolescents/" target="_blank">iocdf.org</a>.
         </li>
         <li>
           UNICEF. (2022). Teens and Body Image. <a href="https://www.unicef.org/parenting/child-care/teens-and-body-image" target="_blank">unicef.org</a>.
@@ -550,66 +598,60 @@
     });
 
     // --- PRESENTACIÓN: Modo diapositiva, temporizador y aplausos ---
-    let presentationMode = false, currSection = 0;
-    const sections = Array.from(document.querySelectorAll('main > section'));
-    const btn = document.getElementById('presentationBtn');
-    let timerInterval, seconds=0, timerDiv=document.getElementById('timer');
-    function showSection(idx) {
-      sections.forEach((sec, i) => {
-        sec.style.display = (i===idx) ? 'block' : 'none';
+    (function(){
+      let presentationMode = false, currSection = 0;
+      const sections = Array.from(document.querySelectorAll('main > section'));
+      const btn = document.getElementById('presentationBtn');
+      let timerInterval, seconds=0, timerDiv=document.getElementById('timer');
+      const applauseBtn = document.getElementById('applauseBtn');
+      function showSection(idx) {
+        sections.forEach((sec, i) => {
+          sec.style.display = (i===idx) ? 'block' : 'none';
+        });
+        if (presentationMode && idx === sections.length - 1) applauseBtn.style.display = 'block';
+        else applauseBtn.style.display = 'none';
+      }
+      function startTimer(){
+        timerDiv.style.display='block'; seconds=0;
+        timerDiv.innerText='00:00';
+        timerInterval = setInterval(()=>{
+          seconds++; timerDiv.innerText=
+            String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0');
+        },1000);
+      }
+      function stopTimer(){
+        timerDiv.style.display='none';
+        clearInterval(timerInterval);
+      }
+      btn.addEventListener('click', function() {
+        presentationMode = !presentationMode;
+        if(presentationMode){
+          currSection=0; showSection(currSection);
+          btn.innerText='Siguiente ▶';
+          btn.title='Avanza a la siguiente sección';
+          document.body.style.overflow='hidden';
+          startTimer();
+        } else {
+          sections.forEach(sec=>sec.style.display='');
+          btn.innerText='Modo presentación';
+          btn.title='';
+          document.body.style.overflow='';
+          stopTimer();
+          applauseBtn.style.display='none';
+        }
       });
-    }
-    function startTimer(){
-      timerDiv.style.display='block'; seconds=0;
-      timerDiv.innerText='00:00';
-      timerInterval = setInterval(()=>{
-        seconds++; timerDiv.innerText=
-          String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0');
-      },1000);
-    }
-    function stopTimer(){
-      timerDiv.style.display='none';
-      clearInterval(timerInterval);
-    }
-    btn.onclick = function() {
-      presentationMode = !presentationMode;
-      if(presentationMode){
-        currSection=0; showSection(currSection);
-        btn.innerText='Siguiente ▶';
-        btn.title='Avanza a la siguiente sección';
-        document.body.style.overflow='hidden';
-        startTimer();
-        applauseBtn.style.display='none';
-      } else {
-        sections.forEach(sec=>sec.style.display='');
-        btn.innerText='Modo presentación';
-        btn.title='';
-        document.body.style.overflow='';
-        stopTimer();
-        applauseBtn.style.display='none';
-      }
-    };
-    document.addEventListener('keydown', (e)=>{
-      if(!presentationMode) return;
-      if(e.key==='ArrowRight'||e.key===' '){
-        currSection = (currSection+1)%sections.length;
-        showSection(currSection);
-        if(currSection===sections.length-1) applauseBtn.style.display='block';
-        else applauseBtn.style.display='none';
-      }else if(e.key==='ArrowLeft'){
-        currSection = (currSection-1+sections.length)%sections.length;
-        showSection(currSection);
-        applauseBtn.style.display='none';
-      }
-    });
-    // Aplausos
-    const applauseBtn = document.getElementById('applauseBtn');
-    applauseBtn.onclick = ()=>document.getElementById('applause').play();
-    // Mostrar el botón de aplausos sólo en la última sección en modo presentación
-    btn.addEventListener('click', ()=>{
-      if(presentationMode&&currSection===sections.length-1) applauseBtn.style.display='block';
-      else applauseBtn.style.display='none';
-    });
+      document.addEventListener('keydown', (e)=>{
+        if(!presentationMode) return;
+        if(e.key==='ArrowRight'||e.key===' '){
+          currSection = Math.min(currSection+1, sections.length-1);
+          showSection(currSection);
+        }else if(e.key==='ArrowLeft'){
+          currSection = Math.max(currSection-1, 0);
+          showSection(currSection);
+        }
+      });
+      applauseBtn.onclick = ()=>document.getElementById('applause').play();
+    })();
   </script>
 </body>
 </html>
