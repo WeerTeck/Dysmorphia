@@ -104,6 +104,15 @@
       overflow: hidden;
       pointer-events: none;
     }
+    /* NUEVO: Fondo de personas con dismorfia */
+    #dysmorphia-people-bg {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100vw; height: 100vh;
+      z-index: 1;
+      pointer-events: none;
+      overflow: hidden;
+    }
     .mirror {
       position: absolute;
       width: 110px;
@@ -127,6 +136,21 @@
       border-radius: 6px;
       opacity: 0.43;
       transform: rotate(-18deg);
+    }
+    /* NUEVO: Personas con dismorfia fondo */
+    .dysmorphia-person {
+      position: absolute;
+      z-index: 1;
+      width: 170px;
+      height: 120px;
+      opacity: 0.24;
+      pointer-events: none;
+      user-select: none;
+      transition: filter 0.3s;
+      filter: blur(0.5px) brightness(1.12);
+    }
+    @media (max-width: 700px) {
+      .dysmorphia-person { width: 110px; height: 80px; }
     }
     @keyframes mirrorFloat {
       0% { transform: translateY(0) scaleX(1) rotate(-8deg);}
@@ -278,6 +302,7 @@
 </head>
 <body>
   <div id="mirrors-bg"></div>
+  <div id="dysmorphia-people-bg"></div>
   <nav>
     <div class="nav-logo">Dysmorphia</div>
     <button class="nav-menu-btn" id="navMenuBtn">&#9776;</button>
@@ -303,200 +328,10 @@
     <p class="subtitle">Mental health and body image in adolescents</p>
   </header>
   <main>
-    <section class="sr card" id="mentalhealth">
-      <h2>What are mental health issues in adolescents?</h2>
-      <p>
-        <strong class="highlight-on-hover">Mental health problems in adolescents</strong> include anxiety, depression, eating disorders, self-harm, and more. According to WHO, <b>1 in 7 adolescents aged 10-19</b> experiences a mental disorder.<br><br>
-        <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">Source: WHO</a>
-      </p>
-      <ul style="margin-bottom:1.1em;">
-        <li>
-          <b>Global prevalence of any mental disorder:</b>
-          <span class="counter" data-target="168000000">0</span> adolescents (14%)
-        </li>
-        <li>
-          <b>Depression:</b>
-          <span class="counter" data-target="60000000">0</span> adolescents (5%)
-        </li>
-        <li>
-          <b>Anxiety:</b>
-          <span class="counter" data-target="48000000">0</span> adolescents (4%)
-        </li>
-        <li>
-          <b>Eating disorders:</b>
-          <span class="counter" data-target="40000000">0</span> adolescents (3.3%)
-        </li>
-        <li>
-          <b>Self-harm:</b>
-          <span class="counter" data-target="25000000">0</span> adolescents (2.1%)
-        </li>
-      </ul>
-      <blockquote>
-        "Mental health is just as important as physical health."
-      </blockquote>
-      <div class="fact-box">
-        Suicide is the <b class="highlight-on-hover">fourth leading cause of death</b> among adolescents aged 15 to 19.
-      </div>
-    </section>
-    <section class="sr card" id="dysmorphia-teen">
-      <h2>What is Body Dysmorphia?</h2>
-      <p>
-        <strong class="highlight-on-hover">Body dysmorphia</strong> (Body Dysmorphic Disorder, BDD) is a mental health condition where a person spends a lot of time worrying about flaws in their appearance. These flaws are often unnoticeable to others.<br>
-        <span style="color:#9fd3c7"><b>Key facts:</b></span>
-        <ul>
-          <li>BDD can begin as early as 12–13 years old and often gets worse over time if untreated.</li>
-          <li>It affects about <b>2%–3% of adolescents</b> worldwide, but body image concerns are much more common.</li>
-          <li>Young people with dysmorphia may avoid social situations, mirrors, or spend hours trying to change their appearance.</li>
-        </ul>
-        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520805/" target="_blank">Source: NCBI</a>
-      </p>
-      <ul style="margin-bottom:1.1em;">
-        <li>
-          <b>Adolescents with body image concerns:</b>
-          <span class="counter" data-target="600000000">0</span> (over 50% worldwide)
-        </li>
-        <li>
-          <b>Diagnosed body dysmorphia:</b>
-          <span class="counter" data-target="24000000">0</span> (2% worldwide)
-        </li>
-        <li>
-          <b>Girls are slightly more likely to report body image issues, but BDD affects all genders.</b>
-        </li>
-      </ul>
-      <div class="fact-box">
-        <b>Symptoms:</b><br>
-        - Obsessively thinking about perceived flaws<br>
-        - Excessive grooming or mirror checking<br>
-        - Seeking cosmetic procedures<br>
-        - Comparing appearance to others constantly<br>
-        - Low self-esteem, anxiety, or depression<br>
-        <a href="https://iocdf.org/about-ocd/related-disorders/bdd/bdd-in-children-and-adolescents/" target="_blank">More info: IOCDF</a>
-      </div>
-      <div class="fact-box">
-        <b>Did you know?</b> Teens with BDD are at higher risk for eating disorders, substance abuse, social withdrawal, and suicidal thoughts.
-      </div>
-    </section>
-    <section class="sr card" id="causes">
-      <h2>Causes of dysmorphia in adolescents</h2>
-      <ul>
-        <li><strong class="highlight-on-hover">Puberty:</strong> Rapid body changes can lead to confusion and insecurity.</li>
-        <li><strong>Social media:</strong> Unrealistic beauty standards, filters, and constant comparison increase dissatisfaction.</li>
-        <li><strong>Bullying:</strong> Teasing or criticism about looks can trigger negative self-image.</li>
-        <li><strong>Family/culture:</strong> Pressure to fit in or meet certain norms.</li>
-        <li><strong>Mental health:</strong> Anxiety, depression, or obsessive-compulsive tendencies raise the risk.</li>
-        <li><strong>Low self-esteem:</strong> Feeling “not good enough” or unworthy.</li>
-        <li><strong>Genetics:</strong> Having a family member with BDD or OCD can increase risk.</li>
-      </ul>
-      <a href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/" target="_blank">Source: Mind</a>
-    </section>
-    <section class="sr card" id="effects">
-      <h2>Effects of body dysmorphia in adolescents</h2>
-      <ul>
-        <li><span class="popword">Low self-esteem</span> and negative self-image</li>
-        <li>Avoiding or obsessively checking mirrors</li>
-        <li>Withdrawing from friends, family, or activities</li>
-        <li>Problems at school (concentration, absenteeism, poor grades)</li>
-        <li>Eating disorders (anorexia, bulimia, binge eating)</li>
-        <li>Excessive exercise or unhealthy dieting</li>
-        <li>Self-harm or suicidal thoughts</li>
-        <li>Seeking cosmetic surgery (even when not recommended)</li>
-        <li>Anxiety and depression</li>
-        <li>Substance abuse</li>
-      </ul>
-      <blockquote>
-        "A mirror can become a source of pain instead of reflection."
-      </blockquote>
-      <a href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/" target="_blank">Source: Mind</a>
-    </section>
-    <section class="sr card" id="combat">
-      <h2>How to combat and prevent dysmorphia</h2>
-      <ul>
-        <li><b class="popword">Talk about it:</b> Share your concerns with someone you trust (friend, parent, counselor).</li>
-        <li><b>Limit social media:</b> Unfollow negative accounts and spend less time comparing yourself to others.</li>
-        <li><b>Focus on strengths:</b> Value non-physical talents and qualities.</li>
-        <li><b>Media literacy:</b> Know that most images are retouched, filtered, or staged.</li>
-        <li><b>Seek professional help:</b> Psychologists, psychiatrists, and counselors can help with therapy and coping skills.</li>
-        <li><b>Practice self-compassion:</b> Treat yourself with the same kindness you’d offer a friend.</li>
-        <li><b>Support groups:</b> Sharing with others can reduce stigma and provide hope.</li>
-        <li><b>Healthy routines:</b> Sleep, exercise, and eating well improve mood and resilience.</li>
-      </ul>
-      <div class="fact-box">
-        Prevention starts with <span class="highlight-on-hover">acceptance</span> and information.<br>
-        <a href="https://iocdf.org/about-ocd/related-disorders/bdd/" target="_blank">Source: IOCDF</a>
-      </div>
-    </section>
-    <section class="sr card" id="campaign">
-      <h2>Our campaign: “See Yourself Clearly”</h2>
-      <ul>
-        <li><b class="popword">Awareness:</b> School talks and workshops</li>
-        <li><b>Self-acceptance:</b> Real stories and resources</li>
-        <li><b>Fight stigma:</b> Safe spaces for open discussion</li>
-        <li><b>Peer support:</b> Groups and resources</li>
-        <li><b>Encourage positive self-talk</b></li>
-        <li><b>Advocate for healthier media</b></li>
-      </ul>
-      <div class="fact-box">
-        Join us! <span style="color:#9fd3c7"><b>#SeeYourselfClearly</b></span>
-      </div>
-    </section>
-    <section class="sr card" id="faq">
-      <h2>Frequently Asked Questions</h2>
-      <ul class="faq-list">
-        <li class="faq-item">
-          <button class="faq-q" type="button">What are the most common problems?</button>
-          <div class="faq-a">Anxiety, depression, eating disorders, self-harm, body image concerns.</div>
-        </li>
-        <li class="faq-item">
-          <button class="faq-q" type="button">Does dysmorphia affect boys?</button>
-          <div class="faq-a">Yes, it can affect any gender.</div>
-        </li>
-        <li class="faq-item">
-          <button class="faq-q" type="button">Does social media have a big influence?</button>
-          <div class="faq-a">Yes, but positive accounts can help too.</div>
-        </li>
-        <li class="faq-item">
-          <button class="faq-q" type="button">How can I help a friend?</button>
-          <div class="faq-a">Listen, support, and recommend professional help if needed.</div>
-        </li>
-        <li class="faq-item">
-          <button class="faq-q" type="button">Can dysmorphia lead to other problems?</button>
-          <div class="faq-a">Yes, it can increase the risk of eating disorders, depression, anxiety, and suicidal thoughts.</div>
-        </li>
-        <li class="faq-item">
-          <button class="faq-q" type="button">Is it treatable?</button>
-          <div class="faq-a">Yes! With therapy and support, most young people see improvement.</div>
-        </li>
-      </ul>
-    </section>
-    <section class="sr card" id="creators">
-      <h2>Creators</h2>
-      <p>
-        Page created by <strong>Lucas De Cesare, Bautista Acerbo, and Santiago Martinez</strong> as a school project to raise awareness about dysmorphia and adolescent mental health.
-      </p>
-    </section>
-    <section class="source-list" id="bibliografia">
-      <h3>References</h3>
-      <ul>
-        <li>
-          World Health Organization. (2021). <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">Adolescent Mental Health</a>.
-        </li>
-        <li>
-          Veale, D., & Bewley, A. (2015). Body dysmorphic disorder. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520805/" target="_blank">NCBI</a>.
-        </li>
-        <li>
-          Mind. (2023). Body Dysmorphic Disorder (BDD). <a href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/body-dysmorphic-disorder-bdd/" target="_blank">mind.org.uk</a>.
-        </li>
-        <li>
-          IOCDF. (2023). About BDD. <a href="https://iocdf.org/about-ocd/related-disorders/bdd/" target="_blank">iocdf.org</a>.
-        </li>
-        <li>
-          IOCDF: BDD in Children and Adolescents. <a href="https://iocdf.org/about-ocd/related-disorders/bdd/bdd-in-children-and-adolescents/" target="_blank">iocdf.org</a>.
-        </li>
-        <li>
-          UNICEF. (2022). Teens and Body Image. <a href="https://www.unicef.org/parenting/child-care/teens-and-body-image" target="_blank">unicef.org</a>.
-        </li>
-      </ul>
-    </section>
+    <!-- ... (el resto de tus secciones igual que antes) ... -->
+    <!-- Pega aquí tu contenido de <main> tal como ya lo tenías -->
+    <!-- OMITIDO POR ESPACIO, pero no cambia respecto al HTML que enviaste -->
+    <!-- ... -->
   </main>
   <footer>
     <p>&copy; 2025 Dysmorphia Awareness - School Project</p>
@@ -551,6 +386,63 @@
         m.style.top = nextTop + 'px';
       });
     }, 32);
+    // NUEVO: crear personas con dismorfia en el fondo
+    function createDysmorphiaPeople(n = 7) {
+      const bg = document.getElementById('dysmorphia-people-bg');
+      const vw = window.innerWidth, vh = window.innerHeight;
+      bg.innerHTML = '';
+      // SVGs simples: silueta y reflejo distorsionado
+      const variants = [
+        // Persona normal, reflejo más delgado
+        `<svg width="170" height="120" viewBox="0 0 170 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="85" cy="100" rx="60" ry="16" fill="#23344a88"/>
+          <rect x="42" y="22" width="86" height="56" rx="37" fill="#324b63" stroke="#6eb7e6" stroke-width="2"/>
+          <!-- Persona real -->
+          <ellipse cx="85" cy="62" rx="20" ry="38" fill="#6eb7e6"/>
+          <!-- Reflejo flaco -->
+          <ellipse cx="85" cy="62" rx="12" ry="42" fill="#9fd3c7" opacity="0.78" transform="translate(30,34) scale(0.7,1)"/>
+        </svg>`,
+        // Persona delgada, reflejo más ancho
+        `<svg width="170" height="120" viewBox="0 0 170 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="85" cy="100" rx="60" ry="16" fill="#23344a77"/>
+          <rect x="42" y="22" width="86" height="56" rx="37" fill="#324b63" stroke="#6eb7e6" stroke-width="2"/>
+          <!-- Persona real -->
+          <ellipse cx="85" cy="62" rx="12" ry="39" fill="#6eb7e6"/>
+          <!-- Reflejo ancho -->
+          <ellipse cx="85" cy="62" rx="24" ry="37" fill="#9fd3c7" opacity="0.78" transform="translate(-28,6) scale(1.17,1)"/>
+        </svg>`,
+        // Persona normal, reflejo más bajo
+        `<svg width="170" height="120" viewBox="0 0 170 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="85" cy="100" rx="60" ry="16" fill="#23344a77"/>
+          <rect x="42" y="22" width="86" height="56" rx="37" fill="#324b63" stroke="#6eb7e6" stroke-width="2"/>
+          <!-- Persona real -->
+          <ellipse cx="85" cy="62" rx="18" ry="35" fill="#6eb7e6"/>
+          <!-- Reflejo bajito -->
+          <ellipse cx="85" cy="92" rx="20" ry="15" fill="#9fd3c7" opacity="0.78"/>
+        </svg>`,
+        // Persona normal, reflejo más alto
+        `<svg width="170" height="120" viewBox="0 0 170 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="85" cy="100" rx="60" ry="16" fill="#23344a77"/>
+          <rect x="42" y="22" width="86" height="56" rx="37" fill="#324b63" stroke="#6eb7e6" stroke-width="2"/>
+          <!-- Persona real -->
+          <ellipse cx="85" cy="62" rx="18" ry="35" fill="#6eb7e6"/>
+          <!-- Reflejo alto -->
+          <ellipse cx="85" cy="42" rx="15" ry="46" fill="#9fd3c7" opacity="0.78"/>
+        </svg>`
+      ];
+      for(let i=0; i<n; i++) {
+        let div = document.createElement('div');
+        div.className = 'dysmorphia-person';
+        div.style.left = (Math.random() * (vw - 180)) + 'px';
+        div.style.top = (Math.random() * (vh - 130)) + 'px';
+        div.style.transform = `scale(${0.94 + Math.random()*0.3}) rotate(${Math.random()*14-7}deg)`;
+        div.innerHTML = variants[i % variants.length];
+        bg.appendChild(div);
+      }
+    }
+    window.addEventListener('resize', ()=>createDysmorphiaPeople());
+    window.addEventListener('DOMContentLoaded', ()=>createDysmorphiaPeople());
+
     document.addEventListener('DOMContentLoaded', () => {
       const srs = document.querySelectorAll('.sr');
       function scrollReveal() {
