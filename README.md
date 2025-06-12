@@ -18,89 +18,45 @@
       line-height: 1.7;
       overflow-x: hidden;
     }
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; height: 56px;
-      background: #1e2a38; box-shadow: 0 3px 18px #1b232c88;
-      z-index: 2002; display: flex; align-items: center; justify-content: space-between;
-      padding: 0 2vw; font-size: 1.08em;
+    #animated-bg {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
     }
-    .nav-logo {
-      font-family: 'Quicksand', sans-serif;
-      font-weight: 700; font-size: 1.25em; color: #6eb7e6; letter-spacing: 2px;
-      text-shadow: 0 0 8px #0d1e2e33; display: flex; align-items: center;
-      margin-right: 1vw;
-    }
-    .nav-links {
-      display: flex; flex-wrap: wrap; gap: 1em; align-items: center;
-    }
-    .nav-links a {
-      color: #e3eaf2; background: none; text-decoration: none; font-weight: 700; font-family: 'Quicksand', sans-serif;
-      padding: 6px 11px; border-radius: 7px; transition: background 0.2s, color 0.2s;
-      font-size: 0.99em;
-    }
-    .nav-links a:hover, .nav-links a:focus { background: #284b63; color: #fff; }
-    .nav-dropdown {
-      position: relative;
-    }
-    .nav-dropdown-content {
-      display: none;
+    .person-mirror {
       position: absolute;
-      background: #23344a;
-      min-width: 160px;
-      box-shadow: 0 8px 22px #0004;
-      border-radius: 9px;
-      top: 34px; left: 0;
-      z-index: 5000;
+      width: 210px;
+      height: 340px;
+      opacity: 0.36;
+      will-change: transform;
+      transition: opacity 0.7s;
     }
-    .nav-dropdown:hover .nav-dropdown-content,
-    .nav-dropdown:focus-within .nav-dropdown-content {
-      display: block;
+    .person-mirror .mirror-shape {
+      fill: #284b63;
+      filter: drop-shadow(0 6px 18px #132e3a88);
     }
-    .nav-dropdown-content a {
-      display: block;
-      color: #6eb7e6;
-      padding: 9px 16px;
-      border-radius: 0;
-      background: none;
-      font-size: 1em;
-      margin: 0;
+    .person-mirror .person {
+      transition: transform 0.7s;
     }
-    .nav-dropdown-content a:hover { background: #284b63; color: #fff; }
-    .nav-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      color: #6eb7e6;
-      font-size: 2em;
-      margin-left: 1vw;
-      cursor: pointer;
+    .person-mirror .reflection {
+      opacity: 0.85;
+      filter: blur(1.2px) brightness(1.13);
+      transition: transform 0.7s;
     }
-    @media (max-width: 850px) {
-      .nav-links { gap: 0.4em; }
-      nav { font-size: 0.99em; }
-      .nav-logo { font-size: 1em;}
+    .person-mirror .reflection.sad {
+      filter: blur(2px) brightness(0.8) grayscale(0.5);
+      opacity: 0.7;
     }
     @media (max-width: 700px) {
-      .nav-links {
-        display: none;
-        position: absolute;
-        flex-direction: column;
-        top: 56px; left: 0; right: 0;
-        background: #1e2a38;
-        gap: 0;
-        padding: 10px 0 10px 0;
-        border-bottom: 2px solid #23344a;
-      }
-      .nav-links.show { display: flex; }
-      .nav-menu-btn { display: block; }
-      .nav-dropdown-content { position: static; box-shadow: none; min-width: 0;}
-      .nav-dropdown-content a { padding: 10px 18px;}
+      .person-mirror { width: 120px; height: 180px; }
     }
     #mirrors-bg {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
       width: 100vw; height: 100vh;
-      z-index: 0;
+      z-index: 1;
       overflow: hidden;
       pointer-events: none;
     }
@@ -214,7 +170,6 @@
       text-align: center; font-size: 0.97rem; color: #6eb7e6; padding: 1.5rem 0; border-top: 1.5px solid #23344a;
       margin-top: auto; background: linear-gradient(90deg, #1e2a38, #23344a); letter-spacing: 1px; z-index: 2;
     }
-    /* FAQ styles */
     .faq-q {
       background: #23344a;
       color: #9fd3c7;
@@ -243,7 +198,6 @@
       transition: all 0.3s;
       display: none;
     }
-    /* Presentación */
     #presentationBtn {
       position:fixed;bottom:22px;right:24px;z-index:3000;
       background:#6eb7e6;color:#1e2a38;border:none;
@@ -255,10 +209,8 @@
       background:#23344a;color:#9fd3c7;padding:9px 18px;border-radius:8px;
       font-family:'Quicksand',sans-serif;font-size:1.1em;
     }
-    /* Palabra clave animada */
     @keyframes popWord { 0%{transform:scale(1);} 50%{transform:scale(1.25);} 100%{transform:scale(1);} }
     .popword { color: #9fd3c7; font-weight: bold; animation: popWord 1.1s infinite alternate; }
-    /* Resaltador */
     .highlight-on-hover:hover {
       background: #9fd3c7;
       color: #1e2a38;
@@ -277,6 +229,7 @@
   </style>
 </head>
 <body>
+  <div id="animated-bg"></div>
   <div id="mirrors-bg"></div>
   <nav>
     <div class="nav-logo">Dysmorphia</div>
@@ -504,20 +457,87 @@
       <a href="#intro" style="color: #9fd3c7;">↑ Back to top</a>
     </p>
   </footer>
-  <!-- Presentación & temporizador -->
   <button id="presentationBtn">Modo presentación</button>
   <div id="timer">00:00</div>
-  <!-- Aplausos -->
   <audio id="applause" src="https://cdn.pixabay.com/audio/2022/11/16/audio_12c3a7ab6d.mp3"></audio>
   <button id="applauseBtn" style="display:none;position:fixed;left:30px;bottom:24px;z-index:3000;background:#6eb7e6;color:#1e2a38;font-size:1.2em;font-family:'Quicksand',sans-serif;border:none;border-radius:10px;padding:10px 20px;box-shadow:0 2px 8px #284b6355;cursor:pointer;">👏 Aplausos</button>
   <script>
-    // Mobile nav menu
+    // Fondo animado de personas viéndose al espejo
+    (function(){
+      const bg = document.getElementById('animated-bg');
+      function createPersonMirror({x, y, flip, mood}) {
+        let reflectColor = mood === "sad" ? "#1e2a38" : "#9fd3c7";
+        let reflectClass = mood === "sad" ? "reflection sad" : "reflection";
+        let svg = `
+        <svg width="100%" height="100%" viewBox="0 0 210 340">
+          <ellipse class="mirror-shape" cx="105" cy="170" rx="90" ry="145" />
+          <g class="person" style="transform:translate(60px,125px)">
+            <ellipse cx="45" cy="58" rx="28" ry="37" fill="#e3eaf2" />
+            <rect x="28" y="95" width="34" height="70" rx="16" fill="#6eb7e6"/>
+            <ellipse cx="45" cy="180" rx="15" ry="30" fill="#9fd3c7"/>
+          </g>
+          <g class="${reflectClass}" style="transform:translate(60px,145px)">
+            <ellipse cx="45" cy="60" rx="27" ry="35" fill="${reflectColor}" />
+            <rect x="28" y="95" width="34" height="70" rx="16" fill="${reflectColor}"/>
+            <ellipse cx="45" cy="180" rx="15" ry="28" fill="${reflectColor}"/>
+            ${mood === "sad" ? `<ellipse cx="45" cy="82" rx="10" ry="4" fill="#263648"/>
+              <path d="M36 83 Q45 75 54 83" stroke="#263648" stroke-width="2" fill="none"/>` :
+              `<ellipse cx="45" cy="80" rx="7" ry="3" fill="#fff"/>
+              <path d="M39 80 Q45 88 51 80" stroke="#fff" stroke-width="2" fill="none"/>`}
+          </g>
+        </svg>`;
+        let div = document.createElement('div');
+        div.className = 'person-mirror';
+        div.style.left = x + 'vw';
+        div.style.top = y + 'vh';
+        if(flip) div.style.transform = "scaleX(-1)";
+        div.innerHTML = svg;
+        bg.appendChild(div);
+        return div;
+      }
+      function drawPersons() {
+        bg.innerHTML = "";
+        let configs = [
+          {x:10, y:18, flip:false, mood:'sad'},
+          {x:70, y:35, flip:true, mood:'happy'},
+          {x:25, y:65, flip:false, mood:'happy'},
+          {x:65, y:72, flip:true, mood:'sad'}
+        ];
+        if(window.innerWidth < 900) configs = [
+          {x:10, y:18, flip:false, mood:'sad'},
+          {x:65, y:72, flip:true, mood:'happy'}
+        ];
+        configs.forEach(cfg=>createPersonMirror(cfg));
+      }
+      drawPersons();
+      window.addEventListener('resize', drawPersons);
+
+      window.addEventListener('scroll', function() {
+        let scroll = window.scrollY;
+        let wh = window.innerHeight;
+        let docH = document.body.scrollHeight;
+        let persons = bg.querySelectorAll('.person-mirror');
+        persons.forEach((el, i)=>{
+          let baseTop = parseFloat(el.style.top);
+          let offset = Math.sin((scroll/wh + i) * 1.5) * 12;
+          el.style.top = (baseTop + offset) + 'vh';
+          let svg = el.querySelector('svg');
+          let reflect = svg.querySelector('.reflection');
+          if(reflect) {
+            if(scroll > (docH-wh)/2 && i%2===0) reflect.classList.add('sad');
+            else reflect.classList.remove('sad');
+          }
+          el.style.opacity = 0.23 + 0.22 * Math.abs(Math.cos((scroll+i*99)/900));
+        });
+      });
+    })();
+
+    // Resto de scripts
     const navBtn = document.getElementById('navMenuBtn');
     const navLinks = document.getElementById('navLinks');
     navBtn.onclick = function() {
       navLinks.classList.toggle('show');
     };
-    // Background mirrors
     function createMirrors(n = 15) {
       const bg = document.getElementById('mirrors-bg');
       let vw = window.innerWidth, vh = window.innerHeight;
@@ -562,7 +582,6 @@
       window.addEventListener('scroll', scrollReveal);
       scrollReveal();
     });
-    // Contador animado para los datos
     function animateCounters() {
       const counters = document.querySelectorAll('.counter');
       counters.forEach(counter => {
@@ -584,7 +603,6 @@
     }
     window.addEventListener('DOMContentLoaded', animateCounters);
 
-    // FAQ interactivo
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.faq-q').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -593,11 +611,9 @@
           btn.classList.toggle('open');
         });
       });
-      // Ocultar todas las respuestas al inicio
       document.querySelectorAll('.faq-a').forEach(a => a.style.display = 'none');
     });
 
-    // --- PRESENTACIÓN: Modo diapositiva, temporizador y aplausos ---
     (function(){
       let presentationMode = false, currSection = 0;
       const sections = Array.from(document.querySelectorAll('main > section'));
