@@ -243,6 +243,31 @@
       transition: all 0.3s;
       display: none;
     }
+    /* Presentación */
+    #presentationBtn {
+      position:fixed;bottom:22px;right:24px;z-index:3000;
+      background:#6eb7e6;color:#1e2a38;border:none;
+      padding:13px 20px;border-radius:50px;box-shadow:0 2px 18px #284b6355;
+      font-size:1.09em;font-family:'Quicksand',sans-serif;font-weight:700;cursor:pointer;
+    }
+    #timer {
+      display:none;position:fixed;top:68px;right:24px;z-index:3002;
+      background:#23344a;color:#9fd3c7;padding:9px 18px;border-radius:8px;
+      font-family:'Quicksand',sans-serif;font-size:1.1em;
+    }
+    /* Palabra clave animada */
+    @keyframes popWord { 0%{transform:scale(1);} 50%{transform:scale(1.25);} 100%{transform:scale(1);} }
+    .popword { color: #9fd3c7; font-weight: bold; animation: popWord 1.1s infinite alternate; }
+    /* Resaltador */
+    .highlight-on-hover:hover {
+      background: #9fd3c7;
+      color: #1e2a38;
+      font-weight: bold;
+      box-shadow: 0 0 8px #6eb7e666;
+      transition: all 0.2s;
+      border-radius: 4px;
+      cursor: pointer;
+    }
     @media (max-width: 900px) { header, main, footer { width: 98%; } }
     @media (max-width: 768px) {
       h1 { font-size: 2.2rem;}
@@ -281,7 +306,7 @@
     <section class="sr card" id="mentalhealth">
       <h2>What are mental health issues in adolescents?</h2>
       <p>
-        <strong>Mental health problems in adolescents</strong> include anxiety, depression, eating disorders, and more. According to WHO, <b>1 in 7 adolescents aged 10-19</b> experiences a mental disorder.<br><br>
+        <strong class="highlight-on-hover">Mental health problems in adolescents</strong> include anxiety, depression, eating disorders, and more. According to WHO, <b>1 in 7 adolescents aged 10-19</b> experiences a mental disorder.<br><br>
         <a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank">Source: WHO</a>
       </p>
       <ul style="margin-bottom:1.1em;">
@@ -302,13 +327,13 @@
         "Mental health is just as important as physical health."
       </blockquote>
       <div class="fact-box">
-        Suicide is the <b>fourth leading cause of death</b> among adolescents aged 15 to 19.
+        Suicide is the <b class="highlight-on-hover">fourth leading cause of death</b> among adolescents aged 15 to 19.
       </div>
     </section>
     <section class="sr card" id="dysmorphia-teen">
       <h2>Dysmorphia in Adolescents</h2>
       <p>
-        <strong>Body dysmorphia</strong> is a disorder in which a person becomes obsessed with perceived physical flaws.<br>
+        <strong class="highlight-on-hover">Body dysmorphia</strong> is a disorder in which a person becomes obsessed with perceived physical flaws.<br>
         According to studies reviewed by NCBI, it affects about <b>2% of adolescents</b> worldwide.<br>
         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520805/" target="_blank">Source: NCBI</a>
       </p>
@@ -329,7 +354,7 @@
     <section class="sr card" id="causes">
       <h2>Causes of dysmorphia in adolescents</h2>
       <ul>
-        <li><strong>Puberty:</strong> Rapid physical changes</li>
+        <li><strong class="highlight-on-hover">Puberty:</strong> Rapid physical changes</li>
         <li><strong>Social media:</strong> Comparisons and filters</li>
         <li><strong>Bullying:</strong> Teasing about looks</li>
         <li><strong>Family/culture:</strong> Pressure to fit in</li>
@@ -340,7 +365,7 @@
     <section class="sr card" id="effects">
       <h2>Effects of body dysmorphia in adolescents</h2>
       <ul>
-        <li>Low self-esteem</li>
+        <li><span class="popword">Low self-esteem</span></li>
         <li>Avoiding or obsessively checking mirrors</li>
         <li>Isolation</li>
         <li>Eating disorders, depression, self-harm</li>
@@ -354,21 +379,21 @@
     <section class="sr card" id="combat">
       <h2>How to combat and prevent dysmorphia</h2>
       <ul>
-        <li><b>Talk about it:</b> Share your concerns</li>
+        <li><b class="popword">Talk about it:</b> Share your concerns</li>
         <li><b>Limit social media:</b> Unfollow negative accounts</li>
         <li><b>Focus on strengths:</b> Value non-physical talents</li>
         <li><b>Media literacy:</b> Know that most images are retouched</li>
         <li><b>Seek professional help</b></li>
       </ul>
       <div class="fact-box">
-        Prevention starts with acceptance and information.<br>
+        Prevention starts with <span class="highlight-on-hover">acceptance</span> and information.<br>
         <a href="https://iocdf.org/about-ocd/related-disorders/bdd/" target="_blank">Source: IOCDF</a>
       </div>
     </section>
     <section class="sr card" id="campaign">
       <h2>Our campaign: “See Yourself Clearly”</h2>
       <ul>
-        <li><b>Awareness:</b> School talks and workshops</li>
+        <li><b class="popword">Awareness:</b> School talks and workshops</li>
         <li><b>Self-acceptance:</b> Real stories and resources</li>
         <li><b>Fight stigma:</b> Safe spaces for open discussion</li>
         <li><b>Peer support:</b> Groups and resources</li>
@@ -431,6 +456,12 @@
       <a href="#intro" style="color: #9fd3c7;">↑ Back to top</a>
     </p>
   </footer>
+  <!-- Presentación & temporizador -->
+  <button id="presentationBtn">Modo presentación</button>
+  <div id="timer">00:00</div>
+  <!-- Aplausos -->
+  <audio id="applause" src="https://cdn.pixabay.com/audio/2022/11/16/audio_12c3a7ab6d.mp3"></audio>
+  <button id="applauseBtn" style="display:none;position:fixed;left:30px;bottom:24px;z-index:3000;background:#6eb7e6;color:#1e2a38;font-size:1.2em;font-family:'Quicksand',sans-serif;border:none;border-radius:10px;padding:10px 20px;box-shadow:0 2px 8px #284b6355;cursor:pointer;">👏 Aplausos</button>
   <script>
     // Mobile nav menu
     const navBtn = document.getElementById('navMenuBtn');
@@ -516,6 +547,68 @@
       });
       // Ocultar todas las respuestas al inicio
       document.querySelectorAll('.faq-a').forEach(a => a.style.display = 'none');
+    });
+
+    // --- PRESENTACIÓN: Modo diapositiva, temporizador y aplausos ---
+    let presentationMode = false, currSection = 0;
+    const sections = Array.from(document.querySelectorAll('main > section'));
+    const btn = document.getElementById('presentationBtn');
+    let timerInterval, seconds=0, timerDiv=document.getElementById('timer');
+    function showSection(idx) {
+      sections.forEach((sec, i) => {
+        sec.style.display = (i===idx) ? 'block' : 'none';
+      });
+    }
+    function startTimer(){
+      timerDiv.style.display='block'; seconds=0;
+      timerDiv.innerText='00:00';
+      timerInterval = setInterval(()=>{
+        seconds++; timerDiv.innerText=
+          String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0');
+      },1000);
+    }
+    function stopTimer(){
+      timerDiv.style.display='none';
+      clearInterval(timerInterval);
+    }
+    btn.onclick = function() {
+      presentationMode = !presentationMode;
+      if(presentationMode){
+        currSection=0; showSection(currSection);
+        btn.innerText='Siguiente ▶';
+        btn.title='Avanza a la siguiente sección';
+        document.body.style.overflow='hidden';
+        startTimer();
+        applauseBtn.style.display='none';
+      } else {
+        sections.forEach(sec=>sec.style.display='');
+        btn.innerText='Modo presentación';
+        btn.title='';
+        document.body.style.overflow='';
+        stopTimer();
+        applauseBtn.style.display='none';
+      }
+    };
+    document.addEventListener('keydown', (e)=>{
+      if(!presentationMode) return;
+      if(e.key==='ArrowRight'||e.key===' '){
+        currSection = (currSection+1)%sections.length;
+        showSection(currSection);
+        if(currSection===sections.length-1) applauseBtn.style.display='block';
+        else applauseBtn.style.display='none';
+      }else if(e.key==='ArrowLeft'){
+        currSection = (currSection-1+sections.length)%sections.length;
+        showSection(currSection);
+        applauseBtn.style.display='none';
+      }
+    });
+    // Aplausos
+    const applauseBtn = document.getElementById('applauseBtn');
+    applauseBtn.onclick = ()=>document.getElementById('applause').play();
+    // Mostrar el botón de aplausos sólo en la última sección en modo presentación
+    btn.addEventListener('click', ()=>{
+      if(presentationMode&&currSection===sections.length-1) applauseBtn.style.display='block';
+      else applauseBtn.style.display='none';
     });
   </script>
 </body>
